@@ -1,6 +1,6 @@
 import CoursePage from '@/app/components/CoursePage'
 import React from 'react'
-
+import { pageImages } from '@/data/image'
 export default function EIAPage() {
   return (
     <CoursePage
@@ -9,7 +9,8 @@ export default function EIAPage() {
       duration="6 Months"
       seats="30"
       eligibility="B.Sc (Science/Environment) or Engineering"
-      image="/newgirlimages/image-49.jpeg"
+      
+                              image={pageImages.adminSecretary}
       content={{
         objectives: [
           "Evaluating the environmental consequences of industrial projects.",

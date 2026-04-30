@@ -1,6 +1,6 @@
 import CoursePage from '@/app/components/CoursePage'
 import React from 'react'
-
+import { pageImages } from '@/data/image'
 export default function TallyGSTPage() {
   return (
     <CoursePage
@@ -9,7 +9,8 @@ export default function TallyGSTPage() {
       duration="6 Months"
       seats="60"
       eligibility="10+2 or Degree (Commerce preferred)"
-      image="/newgirlimages/image-54.jpeg"
+    
+                            image={pageImages.adminSecretary}
       content={{
         objectives: [
           "Mastering Tally Prime for inventory and financial accounting.",

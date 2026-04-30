@@ -11,7 +11,7 @@ import {
   Camera
 } from 'lucide-react';
 import PageHeader from '@/app/components/PageHeader';
-import { contentImages } from '@/data/image';
+import { pageImages } from '@/data/image';
 
 const InfrastructurePage = () => {
   const facilities = [
@@ -48,7 +48,7 @@ const InfrastructurePage = () => {
   // image="/newgirlimages/image-62.jpeg"
   // image="/banner/banner4.jpeg"
   
-                  image= {contentImages?.bookImage} 
+                  image={pageImages.adminSecretary} 
 />
       {/* <div className="relative h-[60vh] bg-gray-900 flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 opacity-40 bg-[url('/newgirlimages/image-78.jpeg')] bg-cover bg-center"></div>

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Microscope, FileText, Lightbulb, Rocket, Users, Globe } from 'lucide-react';
 import PageHeader from '@/app/components/PageHeader';
-import { contentImages } from '@/data/image';
+import { pageImages } from '@/data/image';
 
 const ResearchInnovation = () => {
   const outcomeMetrics = [
@@ -41,7 +41,7 @@ const ResearchInnovation = () => {
   // image="/newgirlimages/image-58.jpeg"
   // image="/banner/banner4.jpeg" 
   
-                  image= {contentImages?.bookImage}
+                  image={pageImages.adminSecretary}
 />
     <div className="bg-slate-50 min-h-screen p-8 font-sans">
       {/* Header */}

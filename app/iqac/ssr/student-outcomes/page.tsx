@@ -1,7 +1,7 @@
 import React from 'react';
 import { GraduationCap, Briefcase, TrendingUp, Trophy, Star, ClipboardList } from 'lucide-react';
 import PageHeader from '@/app/components/PageHeader';
-import { contentImages } from '@/data/image';
+import { pageImages } from '@/data/image';
 
 const StudentOutcomes = () => {
   const primaryOutcomes = [
@@ -41,7 +41,7 @@ const StudentOutcomes = () => {
   // image="/newgirlimages/image-30.jpeg" 
   // image="/banner/banner4.jpeg
   // 
-                  image= {contentImages?.bookImage}
+                  image={pageImages.adminSecretary}
 
 />
    

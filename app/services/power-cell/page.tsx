@@ -12,6 +12,7 @@ import {
   Sparkles,
   Activity,
 } from "lucide-react";
+import { pageImages } from '@/data/image'
 
 export default function Page() {
   return (
@@ -22,7 +23,7 @@ export default function Page() {
         subtitle="Nurturing faith, values, and a meaningful life"
         breadcrumb="Home / Infant Jesus Power Cell"
         // image="/newgirlimages/image-69.jpeg"
-        image= {contentImages?.bookImage}
+        image={pageImages.adminSecretary}
       />
 
       {/* Intro */}

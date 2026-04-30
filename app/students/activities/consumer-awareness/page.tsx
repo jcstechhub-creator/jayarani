@@ -2,7 +2,7 @@ import React from 'react';
 import PageHeader from "@/app/components/PageHeader";
 import { activityImages, contentImages } from "@/data/image";
 import { ShoppingBag, ShieldCheck, Scale, Users, FileText, Award, Info, Star } from 'lucide-react';
-
+import { pageImages } from '@/data/image'
 const ConsumerAwareness = () => {
   // Theme Color Reference:
   // Academic Blue: #1E3A8A (Primary Governance)
@@ -44,7 +44,7 @@ const ConsumerAwareness = () => {
         breadcrumb="Home / Clubs"
         // image={activityImages.consumerAwareness}
         
-                        image= {contentImages?.bookImage}
+                        image={pageImages.adminSecretary}
       />
 
       <main className="max-w-6xl mx-auto py-16 px-6">

@@ -2,7 +2,7 @@ import React from 'react';
 import PageHeader from "@/app/components/PageHeader";
 import { activityImages, contentImages } from "@/data/image";
 import { Leaf, Droplets, Wind, Recycle, Globe, BarChart3, Star } from 'lucide-react';
-
+import { pageImages } from '@/data/image'
 const EcoClubPage = () => {
   const initiatives = [
     {
@@ -39,7 +39,7 @@ const EcoClubPage = () => {
         breadcrumb="Home / Clubs"
         // image={activityImages.ecoClub}
         
-                        image= {contentImages?.bookImage}
+                        image={pageImages.adminSecretary}
       />
 
       <main className="max-w-6xl mx-auto py-16 px-6">

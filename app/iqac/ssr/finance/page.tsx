@@ -1,7 +1,7 @@
 import React from 'react';
 import { CreditCard, FileText, Landmark, ShieldCheck, Receipt, Users, HelpCircle } from 'lucide-react';
 import PageHeader from '@/app/components/PageHeader';
-import { contentImages } from '@/data/image';
+import { pageImages } from '@/data/image';
 
 const FinancePage = () => {
   const accounts = [
@@ -44,7 +44,7 @@ const FinancePage = () => {
   // 
   // image="/banner/banner4.jpeg" 
   
-                  image= {contentImages?.bookImage}
+                  image={pageImages.adminSecretary}
 />
 
       <main className="max-w-6xl mx-auto -mt-10 px-6 pb-20">

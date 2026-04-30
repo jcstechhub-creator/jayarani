@@ -1,6 +1,6 @@
 import CoursePage from '@/app/components/CoursePage'
 import React from 'react'
-
+import { pageImages } from '@/data/image'
 export default function MCAPage() {
   return (
     <CoursePage
@@ -9,7 +9,8 @@ export default function MCAPage() {
       duration="2 Years"
       seats="60"
       eligibility="BCA/B.Sc CS or any degree with Maths at +2 level"
-      image="/newgirlimages/image-64.jpeg"
+      
+                              image={pageImages.adminSecretary}
       content={{
         objectives: [
           "Mastering advanced software architecture and Cloud computing.",

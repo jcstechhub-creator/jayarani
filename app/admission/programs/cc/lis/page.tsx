@@ -1,6 +1,6 @@
 import CoursePage from '@/app/components/CoursePage'
 import React from 'react'
-
+import { pageImages } from '@/data/image'
 export default function LibrarySciencePage() {
   return (
     <CoursePage
@@ -9,7 +9,8 @@ export default function LibrarySciencePage() {
       duration="6 Months"
       seats="40"
       eligibility="10+2 or Any Degree"
-      image="/newgirlimages/image-51.jpeg"
+    
+                            image={pageImages.adminSecretary}
       content={{
         objectives: [
           "Mastering library classification (DDC/CC) and cataloging systems.",

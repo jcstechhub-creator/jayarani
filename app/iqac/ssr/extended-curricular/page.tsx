@@ -1,7 +1,7 @@
 import React from 'react';
 import { ShieldCheck, Leaf, Heart, BookOpen, Users, Lock } from 'lucide-react';
 import PageHeader from '@/app/components/PageHeader';
-import { contentImages } from '@/data/image';
+import { pageImages } from '@/data/image';
 
 const ExtendedCurricular = () => {
   const initiatives = [
@@ -50,7 +50,7 @@ const ExtendedCurricular = () => {
   // image="/newgirlimages/image-9.jpeg" 
   // image="/banner/banner4.jpeg"
   
-                  image= {contentImages?.bookImage}
+                  image={pageImages.adminSecretary}
 />
 
       <main className="max-w-6xl mx-auto py-12 px-6">

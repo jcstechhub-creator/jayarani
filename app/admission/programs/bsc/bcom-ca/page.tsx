@@ -1,6 +1,6 @@
 import CoursePage from '@/app/components/CoursePage'
 import React from 'react'
-
+import { pageImages } from '@/data/image'
 function page() {
   return (
     <>
@@ -10,7 +10,8 @@ function page() {
         duration="3 Years"
         seats="60"
         eligibility="10+2 Pass (Commerce/Accountancy with Computer Science preferred)"
-        image="/newgirlimages/image-19.jpeg"
+       
+                               image={pageImages.adminSecretary}
         content={{
           objectives: [
             "Integrating core accounting principles with advanced computer programming.",

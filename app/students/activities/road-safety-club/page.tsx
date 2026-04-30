@@ -2,7 +2,7 @@ import React from 'react';
 import PageHeader from "@/app/components/PageHeader";
 import { activityImages, contentImages } from "@/data/image";
 import { ShieldAlert, Users, Truck, MapPin, Award, Star, Info } from 'lucide-react';
-
+import { pageImages } from '@/data/image'
 const RoadSafetyClub = () => {
   const initiatives = [
     {
@@ -39,7 +39,7 @@ const RoadSafetyClub = () => {
         breadcrumb="Home / Clubs"
         // image={activityImages.roadSafetyClub}
         
-                        image= {contentImages?.bookImage}
+                        image={pageImages.adminSecretary}
       />
 
       <main className="max-w-6xl mx-auto py-16 px-6">

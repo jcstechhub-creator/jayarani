@@ -1,6 +1,6 @@
 import CoursePage from '@/app/components/CoursePage'
 import React from 'react'
-
+import { pageImages } from '@/data/image'
 export default function MASociology() {
   return (
     <CoursePage
@@ -9,7 +9,8 @@ export default function MASociology() {
       duration="2 Years"
       seats="40"
       eligibility="Any Graduate"
-      image="/newgirlimages/image-109.jpeg"
+     
+                             image={pageImages.adminSecretary}
       content={{
         objectives: [
           "Analyzing complex social structures and urban/rural transitions.",

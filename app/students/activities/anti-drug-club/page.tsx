@@ -2,7 +2,7 @@ import React from 'react';
 import PageHeader from "@/app/components/PageHeader";
 import { activityImages, contentImages } from "@/data/image";
 import { ShieldCheck, Trophy, Heart, Users, Zap, Award, Info } from 'lucide-react';
-
+import { pageImages } from '@/data/image'
 const AntiDrugSports = () => {
   const activities = [
     {
@@ -39,7 +39,7 @@ const AntiDrugSports = () => {
         breadcrumb="Home / Clubs"
         // image={activityImages.antiDrugClub}
         
-                        image= {contentImages?.bookImage}
+                        image={pageImages.adminSecretary}
       />
 
       <main className="max-w-6xl mx-auto py-16 px-6">

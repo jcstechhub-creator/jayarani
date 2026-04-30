@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import { Mail, GraduationCap, Award, BookOpen, Search } from 'lucide-react';
 import PageHeader from '@/app/components/PageHeader';
-import { contentImages } from '@/data/image';
+import { pageImages } from '@/data/image';
 
 const FacultyPage = () => {
   const [searchTerm, setSearchTerm] = useState("");
@@ -56,7 +56,7 @@ const FacultyPage = () => {
   // image="/newgirlimages/image-41.jpeg"
   // image="/banner/banner4.jpeg"
   
-                  image= {contentImages?.bookImage} 
+                  image={pageImages.adminSecretary} 
 />
 
       {/* Search Bar */}

@@ -1,6 +1,6 @@
 import CoursePage from '@/app/components/CoursePage'
 import React from 'react'
-
+import { pageImages } from '@/data/image'
 function page() {
   return (
     <>
@@ -10,7 +10,8 @@ function page() {
         duration="3 Years"
         seats="70"
         eligibility="10+2 Pass (Commerce/Accountancy Stream Preferred)"
-        image="/newgirlimages/image-1.jpeg"
+        
+                                image={pageImages.adminSecretary}
         content={{
           objectives: [
             "Mastering the principles of Modern Accounting and Financial Management.",

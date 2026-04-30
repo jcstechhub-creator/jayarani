@@ -1,6 +1,6 @@
 import CoursePage from '@/app/components/CoursePage'
 import React from 'react'
-
+import { pageImages } from '@/data/image'
 export default function RDPRPage() {
   return (
     <CoursePage
@@ -9,7 +9,8 @@ export default function RDPRPage() {
       duration="6 Months"
       seats="50"
       eligibility="10+2 or Any Degree"
-      image="/newgirlimages/image-52.jpeg"
+     
+                             image={pageImages.adminSecretary}
       content={{
         objectives: [
           "Understanding the 3-tier Panchayat Raj system and rural administration.",

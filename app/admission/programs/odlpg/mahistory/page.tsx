@@ -1,6 +1,6 @@
 import CoursePage from '@/app/components/CoursePage'
 import React from 'react'
-
+import { pageImages } from '@/data/image'
 export default function MAHistory() {
   return (
     <CoursePage
@@ -9,7 +9,8 @@ export default function MAHistory() {
       duration="2 Years"
       seats="40"
       eligibility="Any Graduate"
-      image="/newgirlimages/image-61.jpeg"
+     
+                             image={pageImages.adminSecretary}
       content={{
         objectives: [
           "Mastering historiography and advanced research methodologies.",

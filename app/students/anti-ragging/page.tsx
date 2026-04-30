@@ -50,7 +50,7 @@ export default function AntiRaggingCell() {
         breadcrumb="Home / Student Support / Anti-Ragging"
         // image={pageImages.studentsAntiRagging}
         
-                        image= {contentImages?.bookImage}
+                        image={pageImages.adminSecretary}
       />
 
       {/* --- WARNING BANNER --- */}

@@ -10,7 +10,7 @@ import {
   Lightbulb,
   MessageCircle,
 } from "lucide-react";
-
+import { pageImages } from '@/data/image'
 export default function Page() {
   return (
     <>
@@ -21,7 +21,7 @@ export default function Page() {
         breadcrumb="Home / Clubs"
         // image={activityImages.literary}
         
-                        image= {contentImages?.bookImage}
+                        image={pageImages.adminSecretary}
       />
 
       {/* Intro */}

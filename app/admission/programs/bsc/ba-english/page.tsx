@@ -1,6 +1,7 @@
 import CoursePage from '@/app/components/CoursePage'
+import { contentImages } from '@/data/image'
 import React from 'react'
-
+import { pageImages } from '@/data/image'
 function page() {
   return (
     <>
@@ -10,7 +11,9 @@ function page() {
         duration="3 Years"
         seats="60"
         eligibility="10+2 Pass (Any Stream)"
-        image="/newgirlimages/image-43.jpeg"
+        // image="/newgirlimages/image-43.jpeg"
+        
+                        image={pageImages.adminSecretary}
         content={{
           objectives: [
             "Transforming students into expert communicators for the global market.",

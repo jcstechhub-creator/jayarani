@@ -1,6 +1,6 @@
 import CoursePage from '@/app/components/CoursePage'
 import React from 'react'
-
+import { pageImages } from '@/data/image'
 export default function DiplomaSocialWelfare() {
   return (
     <CoursePage
@@ -9,7 +9,8 @@ export default function DiplomaSocialWelfare() {
       duration="1 Year"
       seats="40"
       eligibility="10+2 or Any Degree"
-      image="/newgirlimages/image-58.jpeg"
+    
+                            image={pageImages.adminSecretary}
       content={{
         objectives: [
           "Understanding the legal framework of social welfare in India.",

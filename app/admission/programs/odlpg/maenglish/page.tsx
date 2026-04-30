@@ -1,6 +1,6 @@
 import CoursePage from '@/app/components/CoursePage'
 import React from 'react'
-
+import { pageImages } from '@/data/image'
 export default function MAEnglish() {
   return (
     <CoursePage
@@ -9,7 +9,8 @@ export default function MAEnglish() {
       duration="2 Years"
       seats="40"
       eligibility="B.A. English Literature"
-      image="/newgirlimages/image-60.jpeg"
+      
+                              image={pageImages.adminSecretary}
       content={{
         objectives: [
           "Exploring Post-colonialism, Feminism, and Contemporary Theory.",

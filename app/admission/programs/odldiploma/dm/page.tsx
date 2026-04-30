@@ -1,6 +1,6 @@
 import CoursePage from '@/app/components/CoursePage'
 import React from 'react'
-
+import { pageImages } from '@/data/image'
 export default function DiplomaDigitalMarketing() {
   return (
     <CoursePage
@@ -9,7 +9,8 @@ export default function DiplomaDigitalMarketing() {
       duration="1 Year"
       seats="50"
       eligibility="10+2 or Any Degree"
-      image="/newgirlimages/image-55.jpeg"
+     
+                             image={pageImages.adminSecretary}
       content={{
         objectives: [
           "Mastering SEO (Search Engine Optimization) and Content Strategy.",

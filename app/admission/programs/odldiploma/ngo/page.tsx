@@ -1,6 +1,6 @@
 import CoursePage from '@/app/components/CoursePage'
 import React from 'react'
-
+import { pageImages } from '@/data/image'
 export default function DiplomaNGO() {
   return (
     <CoursePage
@@ -9,7 +9,8 @@ export default function DiplomaNGO() {
       duration="1 Year"
       seats="40"
       eligibility="10+2 or Any Degree"
-      image="/newgirlimages/image-57.jpeg"
+     
+                             image={pageImages.adminSecretary}
       content={{
         objectives: [
           "Learning the legalities of NGO registration and FCRA compliance.",

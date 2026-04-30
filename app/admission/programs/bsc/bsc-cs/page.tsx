@@ -1,6 +1,6 @@
 import CoursePage from '@/app/components/CoursePage'
 import React from 'react'
-
+import { pageImages } from '@/data/image'
 function page() {
   return (
     <>
@@ -10,7 +10,8 @@ function page() {
         duration="3 Years"
         seats="50"
         eligibility="10+2 Pass (Mathematics / Computer Science Stream)"
-        image="/newgirlimages/image-44.jpeg"
+       
+                               image={pageImages.adminSecretary}
         content={{
           objectives: [
             "Mastering full-stack development, from database logic to front-end interfaces.",

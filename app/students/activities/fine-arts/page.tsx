@@ -2,7 +2,7 @@ import React from 'react';
 import PageHeader from "@/app/components/PageHeader";
 import { activityImages, contentImages } from "@/data/image";
 import { Palette, Music, Camera, Theater, Star, Trophy, Users, Heart } from 'lucide-react';
-
+import { pageImages } from '@/data/image'
 const FineArtsPage = () => {
   // Theme Color Constants for reference in the code
   // Primary Blue: #1E3A8A (Academic)
@@ -44,7 +44,7 @@ const FineArtsPage = () => {
         breadcrumb="Home / Clubs"
         // image={activityImages.fineArts}
         
-                        image= {contentImages?.bookImage}
+                        image={pageImages.adminSecretary}
       />
 
       <main className="max-w-6xl mx-auto py-16 px-6">

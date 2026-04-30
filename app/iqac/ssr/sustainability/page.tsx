@@ -1,7 +1,7 @@
 import React from 'react';
 import { Leaf, Droplets, Wind, Recycle, Users, BarChart3 } from 'lucide-react';
 import PageHeader from '@/app/components/PageHeader';
-import { contentImages } from '@/data/image';
+import { pageImages } from '@/data/image';
 
 const SustainabilityOutcomes = () => {
   const metrics = [
@@ -42,7 +42,7 @@ const SustainabilityOutcomes = () => {
   // image="/newgirlimages/image-55.jpeg" 
   // image="/banner/banner4.jpeg"
   
-                  image= {contentImages?.bookImage}
+                  image={pageImages.adminSecretary}
 />
     
     <div className="bg-emerald-50/30 min-h-screen p-8 font-sans">

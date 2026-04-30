@@ -1,6 +1,6 @@
 import CoursePage from '@/app/components/CoursePage'
 import React from 'react'
-
+import { pageImages } from '@/data/image'
 export default function SocialEntrepreneurshipPage() {
   return (
     <CoursePage
@@ -9,7 +9,8 @@ export default function SocialEntrepreneurshipPage() {
       duration="6 Months"
       seats="40"
       eligibility="Any Degree or Aspiring Founders"
-      image="/newgirlimages/image-53.jpeg"
+     
+                             image={pageImages.adminSecretary}
       content={{
         objectives: [
           "Building business models that solve critical social and environmental problems.",

@@ -1,5 +1,5 @@
 import PageHeader from '@/app/components/PageHeader';
-import { contentImages } from '@/data/image';
+import { pageImages } from '@/data/image';
 import React from 'react';
 
 const CurriculumDesign = () => {
@@ -21,7 +21,7 @@ const CurriculumDesign = () => {
   // image="/newgirlimages/image-49.jpeg" 
   // image="/banner/banner4.jpeg"
   
-                  image= {contentImages?.bookImage}
+                  image={pageImages.adminSecretary}
 />
     <div className="max-w-6xl mx-auto p-6 bg-gray-50 min-h-screen">
       {/* Header Section */}

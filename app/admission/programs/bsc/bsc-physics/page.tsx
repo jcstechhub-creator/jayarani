@@ -1,4 +1,5 @@
 import CoursePage from '@/app/components/CoursePage'
+import { pageImages } from '@/data/image'
 import React from 'react'
 
 function page() {
@@ -10,7 +11,8 @@ function page() {
         duration="3 Years"
         seats="50"
         eligibility="10+2 Pass (Physics & Mathematics stream)"
-        image="/newgirlimages/image-46.jpeg"
+        
+                                image={pageImages.adminSecretary}
         content={{
           objectives: [
             "Mastering the fundamental laws of the universe, from quantum mechanics to astrophysics.",

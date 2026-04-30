@@ -1,6 +1,6 @@
 import CoursePage from '@/app/components/CoursePage'
 import React from 'react'
-
+import { pageImages } from '@/data/image'
 export default function MBAPage() {
   return (
     <CoursePage
@@ -9,7 +9,8 @@ export default function MBAPage() {
       duration="2 Years"
       seats="60"
       eligibility="Any Graduate with 50% marks"
-      image="/newgirlimages/image-63.jpeg"
+    
+                            image={pageImages.adminSecretary}
       content={{
         objectives: [
           "Developing a global mindset for organizational leadership.",

@@ -1,4 +1,5 @@
 import CoursePage from '@/app/components/CoursePage'
+import { pageImages } from '@/data/image'
 import React from 'react'
 
 function page() {
@@ -10,7 +11,8 @@ function page() {
         duration="3 Years"
         seats="60"
         eligibility="10+2 Pass (Mathematics as a Core Subject)"
-        image="/newgirlimages/image-45.jpeg"
+       
+                               image={pageImages.adminSecretary}
         content={{
           objectives: [
             "Developing advanced logical reasoning and abstract thinking capabilities.",

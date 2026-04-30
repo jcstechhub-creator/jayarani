@@ -1,4 +1,5 @@
 import CoursePage from '@/app/components/CoursePage'
+import { pageImages } from '@/data/image'
 import React from 'react'
 
 export default function MScMaths() {
@@ -9,7 +10,8 @@ export default function MScMaths() {
       duration="2 Years"
       seats="40"
       eligibility="B.Sc. Mathematics"
-      image="/newgirlimages/image-66.jpeg"
+     
+                             image={pageImages.adminSecretary}
       content={{
         objectives: [
           "In-depth mastery of Topology, Abstract Algebra, and Analysis.",

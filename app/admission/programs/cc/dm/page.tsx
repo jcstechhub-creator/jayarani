@@ -1,6 +1,6 @@
 import CoursePage from '@/app/components/CoursePage'
+import { pageImages } from '@/data/image'
 import React from 'react'
-
 export default function DisasterManagementPage() {
   return (
     <CoursePage
@@ -9,7 +9,8 @@ export default function DisasterManagementPage() {
       duration="6 Months"
       seats="40"
       eligibility="10+2 or Any Degree"
-      image="/newgirlimages/image-47.jpeg"
+     
+                             image={pageImages.adminSecretary}
       content={{
         objectives: [
           "Mastering risk assessment for natural and man-made disasters.",

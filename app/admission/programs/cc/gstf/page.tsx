@@ -1,6 +1,6 @@
 import CoursePage from '@/app/components/CoursePage'
 import React from 'react'
-
+import { pageImages } from '@/data/image'
 export default function GSTFilingPage() {
   return (
     <CoursePage
@@ -9,7 +9,8 @@ export default function GSTFilingPage() {
       duration="3 Months (Fast Track)"
       seats="60"
       eligibility="B.Com/M.Com or Accounts Professionals"
-      image="/newgirlimages/image-50.jpeg"
+      
+                              image={pageImages.adminSecretary}
       content={{
         objectives: [
           "Mastering the GST Portal for Registration and Cancellation.",

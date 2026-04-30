@@ -1,6 +1,6 @@
 import CoursePage from '@/app/components/CoursePage'
 import React from 'react'
-
+import { pageImages } from '@/data/image'
 export default function DiplomaFinance() {
   return (
     <CoursePage
@@ -9,7 +9,8 @@ export default function DiplomaFinance() {
       duration="1 Year"
       seats="40"
       eligibility="10+2 or Any Degree (Commerce preferred)"
-      image="/newgirlimages/image-56.jpeg"
+      
+                              image={pageImages.adminSecretary}
       content={{
         objectives: [
           "Mastering the art of Personal Wealth Management and Investment.",

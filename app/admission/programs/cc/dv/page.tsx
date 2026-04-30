@@ -1,6 +1,6 @@
 import CoursePage from '@/app/components/CoursePage'
 import React from 'react'
-
+import { pageImages } from '@/data/image'
 export default function DataVisPage() {
   return (
     <CoursePage
@@ -9,7 +9,8 @@ export default function DataVisPage() {
       duration="6 Months"
       seats="30"
       eligibility="Any Graduate with basic Computer Knowledge"
-      image="/newgirlimages/image-48.jpeg"
+     
+                             image={pageImages.adminSecretary}
       content={{
         objectives: [
           "Transforming raw data into high-impact visual stories and dashboards.",

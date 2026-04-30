@@ -1,7 +1,7 @@
 import React from 'react';
 import { Lightbulb, ClipboardCheck, Users, Monitor, ShieldAlert, Award } from 'lucide-react';
 import PageHeader from '@/app/components/PageHeader';
-import { contentImages } from '@/data/image';
+import { pageImages } from '@/data/image';
 
 const LearningTeaching = () => {
   const metrics = [
@@ -36,7 +36,7 @@ const LearningTeaching = () => {
   // image="/newgirlimages/image-61.jpeg" 
   // image="/banner/banner4.jpeg"
   
-                  image= {contentImages?.bookImage}
+                  image={pageImages.adminSecretary}
 />
       {/* Header Section */}
       <div className="max-w-6xl mx-auto mb-12 text-center">

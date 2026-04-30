@@ -1,6 +1,6 @@
 import CoursePage from '@/app/components/CoursePage'
 import React from 'react'
-
+import { pageImages } from '@/data/image'
 export default function MAEconomics() {
   return (
     <CoursePage
@@ -9,7 +9,8 @@ export default function MAEconomics() {
       duration="2 Years"
       seats="40"
       eligibility="Any Graduate (Economics preferred)"
-      image="/newgirlimages/image-59.jpeg"
+     
+                             image={pageImages.adminSecretary}
       content={{
         objectives: [
           "Developing expertise in Micro, Macro, and Econometric modeling.",

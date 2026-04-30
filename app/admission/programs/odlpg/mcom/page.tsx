@@ -1,6 +1,6 @@
 import CoursePage from '@/app/components/CoursePage'
 import React from 'react'
-
+import { pageImages } from '@/data/image'
 export default function MComPage() {
   return (
     <CoursePage
@@ -9,7 +9,8 @@ export default function MComPage() {
       duration="2 Years"
       seats="40"
       eligibility="B.Com or B.B.A. Graduate"
-      image="/newgirlimages/image-65.jpeg"
+    
+                            image={pageImages.adminSecretary}
       content={{
         objectives: [
           "Mastering advanced corporate accounting and IFRS standards.",
