@@ -37,7 +37,7 @@ export default function ABCVideoPage() {
             <h2 className="text-2xl font-bold text-slate-800">How to register for ABC?</h2>
             <p className="mt-4 text-slate-600">
               This video provides a step-by-step walkthrough for students to link their Aadhaar
-              and verify their UMIS numbers for the Academic Bank of Credits[cite: 360, 1642].
+              and verify their UMIS numbers for the Academic Bank of Credits.
             </p>
           </div>
         </div>

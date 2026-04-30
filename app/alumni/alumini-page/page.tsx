@@ -98,7 +98,7 @@ const AlumniAssociation = () => {
                                 <p className="text-lg font-bold text-[#2F4A8A]">Ms. T. Poornima </p>
                             </div>
                             <div className="pt-4 border-t border-slate-100">
-                                <p className="text-xs text-slate-500 italic">Supported by the Student Council Executive Members [cite: 443-446].</p>
+                                <p className="text-xs text-slate-500 italic">Supported by the Student Council Executive Members.</p>
                             </div>
                         </div>
                     </div>

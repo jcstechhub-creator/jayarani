@@ -27,7 +27,7 @@ export default function ABCBannerPage() {
             <h2 className="text-2xl font-bold text-slate-800 mb-4 tracking-tight">Promotional Media</h2>
             <p className="text-slate-600 mb-6 leading-relaxed">
               Download the official ABC Banner for awareness regarding the digital storage of credits,
-              managed through the college IT Wing and ERP systems[cite: 378, 1660].
+              managed through the college IT Wing and ERP systems.
             </p>
             <a
               href="https://drive.google.com/file/d/1svNbF4Rcy9Y_dEbwlC8UfH98SGeM2crl/view?usp=drive_link"

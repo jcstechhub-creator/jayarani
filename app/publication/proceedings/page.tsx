@@ -74,7 +74,7 @@ const ConferenceProceedings = () => {
             </div>
             <p className="text-gray-600 leading-relaxed italic">
               "In this age of rapid technological improvement, collaboration among researchers is essential to our survival.
-              This proceedings is a terrific way for academic staff and researchers to collaborate, network, and learn[cite: 821, 823]."
+              This proceedings is a terrific way for academic staff and researchers to collaborate, network, and learn."
             </p>
             <p className="font-bold text-gray-900">— Dr. R. Suganthi </p>
           </div>

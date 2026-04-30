@@ -91,7 +91,7 @@ const AdmissionsRules = () => {
                     <div className="mt-16 text-center">
                         <p className="text-gray-500 italic">
                             * Please ensure all documents are verified before submission.
-                            Admissions are conducted in accordance with the regulations of Periyar University. <span className="text-xs font-mono">[cite: 607]</span>
+                            Admissions are conducted in accordance with the regulations of Periyar University. <span className="text-xs font-mono"></span>
                         </p>
                     </div>
                 </div>

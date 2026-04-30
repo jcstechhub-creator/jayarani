@@ -6,7 +6,7 @@ import { Award, BookOpen, Cpu, ShieldCheck, Microscope, Users, Quote } from "luc
 
 const CollegeMagazine = () => {
   const magazineImages = {
-    hero: "/newgirlimages/image-100.jpeg",
+    hero: "/banner/banner4.jpeg",
     award: "/newgirlimages/award_2025.jpg",
     conference: "/newgirlimages/image-50.jpeg",
   };

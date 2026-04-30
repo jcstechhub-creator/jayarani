@@ -50,7 +50,7 @@ const AcademicCalendarPage = () => {
             <h4 className="font-bold text-red-900">Examination Policy Notice</h4>
             <p className="text-sm text-red-800/80 leading-relaxed">
               80% attendance is a pre-requisite for writing Semester Exams and receiving Scholarships.
-              Continuous Internal Assessment (CIA) accounts for 25 marks[cite: 3325].
+              Continuous Internal Assessment (CIA) accounts for 25 marks.
             </p>
           </div>
         </div>
@@ -118,7 +118,6 @@ const AcademicCalendarPage = () => {
               </div>
             </div>
 
-            {/* CIA Weightage Card [cite: 3330] */}
             <div className="bg-white rounded-3xl p-8 border border-slate-200 shadow-sm">
               <h4 className="font-bold text-slate-900 mb-6 flex items-center gap-2 tracking-tight">
                 <GraduationCap className="text-red-900" size={20} /> Internal Evaluation

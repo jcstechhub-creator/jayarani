@@ -133,33 +133,33 @@ const Footer = () => {
                       {
                         title: "Rules and Regulations",
                         url: "/rules-and-regulations",
-                        description: "Official guidelines regarding conduct, attendance, and examinations[cite: 604, 623]."
+                        description: "Official guidelines regarding conduct, attendance, and examinations."
                       },
                       {
                         title: "Transportation Services",
                         // title: "Bus Routes",
                         url: "/bus-routes",
-                        description: "Detailed information on college transport facility and safety protocols[cite: 692, 710]."
+                        description: "Detailed information on college transport facility and safety protocols."
                       },
                       {
                         title: "eContent",
                         url: "/e-content",
-                        description: "Digital learning resources including SWAYAM-NPTEL and MOOC programs[cite: 249, 385]."
+                        description: "Digital learning resources including SWAYAM-NPTEL and MOOC programs."
                       },
                       {
                         title: "Downloads",
                         url: "/downloads",
-                        description: "Access to scholarship forms and application documents[cite: 597, 605]."
+                        description: "Access to scholarship forms and application documents."
                       },
                       {
                         title: "Faculty Details",
                         url: "/faculty-details",
-                        description: "Profiles of the academic staff across all departments[cite: 499, 501]."
+                        description: "Profiles of the academic staff across all departments."
                       },
                       {
                         title: "Contact Us",
                         url: "/contact",
-                        description: "College office location and emergency contact information[cite: 4, 9]."
+                        description: "College office location and emergency contact information."
                       }
                     ].map((l) => (
                       <Link

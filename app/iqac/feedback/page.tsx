@@ -15,7 +15,7 @@ const IQACFeedback = () => {
     },
     {
       title: "Exit Poll",
-      desc: "Gathering insights from our graduating visionaries to enhance the holistic development of future batches[cite: 211, 1493].",
+      desc: "Gathering insights from our graduating visionaries to enhance the holistic development of future batches.",
       url: "https://forms.gle/4EmZdnQPJE7F8C7s7",
       icon: <Users className="w-8 h-8 text-red-900" />,
       tag: "Institutional Growth"
@@ -93,11 +93,11 @@ const IQACFeedback = () => {
               <p className="text-slate-600 italic leading-relaxed mb-4">
                 "The IQAC is committed to fostering a culture of academic rigor and inclusivity.
                 Your feedback is a transformative force that helps us prepare our students to
-                emerge as visionary leaders[cite: 211, 214]."
+                emerge as visionary leaders."
               </p>
               <div className="flex flex-col">
                 <span className="font-bold text-slate-900">Dr. D. Arul Pon Daniel</span>
-                <span className="text-xs text-slate-400 uppercase tracking-widest">Deputy Principal & IQAC Coordinator [cite: 266, 1548]</span>
+                <span className="text-xs text-slate-400 uppercase tracking-widest">Deputy Principal & IQAC Coordinator</span>
               </div>
             </div>
           </div>

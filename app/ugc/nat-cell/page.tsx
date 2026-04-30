@@ -20,7 +20,7 @@ export default function NATCellPage() {
               <h2 className="text-3xl font-bold mb-2">National Apprenticeship Training</h2>
               <p className="text-blue-100 max-w-lg leading-relaxed">
                 Empowering our students through industry-integrated learning and technical
-                competence as per the vision of the Training and Placement committee[cite: 1581].
+                competence as per the vision of the Training and Placement committee.
               </p>
             </div>
             <div className="p-4 bg-white/10 rounded-2xl backdrop-blur-md">

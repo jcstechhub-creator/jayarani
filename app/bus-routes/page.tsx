@@ -28,12 +28,12 @@ const TransportationPage = () => {
     const guidelines = [
         {
             title: "Punctuality",
-            desc: "Students must be at the bus stop at least ten minutes before the scheduled arrival. Buses will not wait for latecomers [cite: 693-694].",
+            desc: "Students must be at the bus stop at least ten minutes before the scheduled arrival. Buses will not wait for latecomers.",
             icon: <Clock className="w-5 h-5 text-red-900" />
         },
         {
             title: "Safety First",
-            desc: "Do not approach the entry/exit door until the bus comes to a complete halt. Occupy allotted seats immediately [cite: 697-698].",
+            desc: "Do not approach the entry/exit door until the bus comes to a complete halt. Occupy allotted seats immediately.",
             icon: <ShieldAlert className="w-5 h-5 text-red-900" />
         },
         {
@@ -59,7 +59,7 @@ const TransportationPage = () => {
                         <h2 className="text-3xl font-bold text-gray-900 mb-6">Connecting Salem to Excellence</h2>
                         <p className="text-gray-600 mb-4 leading-relaxed">
                             JCS provides a dedicated fleet of buses serving students and staff across Salem District and its surrounding areas.
-                            Our transport network supports daily commutes, field trips, and industrial visits[cite: 228, 543].
+                            Our transport network supports daily commutes, field trips, and industrial visits.
                         </p>
                         <div className="bg-blue-50 p-6 rounded-2xl border-l-4 border-blue-900">
                             <p className="text-blue-900 font-medium">
@@ -121,10 +121,10 @@ const TransportationPage = () => {
                     <div className="relative z-10">
                         <h4 className="text-xl font-bold mb-4">Important Notice</h4>
                         <ul className="text-gray-300 text-sm space-y-2 list-disc pl-5">
-                            <li>One-way transport facility is not provided[cite: 707].</li>
-                            <li>Consumption of edibles is strictly prohibited inside the bus[cite: 706].</li>
-                            <li>The college retains the right to deny the facility for indiscipline or non-payment of fees[cite: 711, 713].</li>
-                            <li>Changes to allotted bus stops require prior permission from the Vice-Principal (Administration)[cite: 696].</li>
+                            <li>One-way transport facility is not provided.</li>
+                            <li>Consumption of edibles is strictly prohibited inside the bus.</li>
+                            <li>The college retains the right to deny the facility for indiscipline or non-payment of fees.</li>
+                            <li>Changes to allotted bus stops require prior permission from the Vice-Principal (Administration).</li>
                         </ul>
                     </div>
                     <Bus className="absolute -right-10 -bottom-10 w-64 h-64 text-white/5 rotate-12" />
