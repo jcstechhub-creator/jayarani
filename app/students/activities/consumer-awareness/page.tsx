@@ -1,6 +1,6 @@
 import React from 'react';
 import PageHeader from "@/app/components/PageHeader";
-import { activityImages } from "@/data/image";
+import { activityImages, contentImages } from "@/data/image";
 import { ShoppingBag, ShieldCheck, Scale, Users, FileText, Award, Info, Star } from 'lucide-react';
 
 const ConsumerAwareness = () => {
@@ -42,7 +42,9 @@ const ConsumerAwareness = () => {
         title="Consumer Awareness Club"
         subtitle="Empowering students and the community through education on rights"
         breadcrumb="Home / Clubs"
-        image={activityImages.consumerAwareness}
+        // image={activityImages.consumerAwareness}
+        
+                        image= {contentImages?.bookImage}
       />
 
       <main className="max-w-6xl mx-auto py-16 px-6">

@@ -4,11 +4,12 @@ import React from "react";
 // import PageHeader from "@/components/PageHeader";
 import { BookText, FileSignature, Landmark, Newspaper, BookmarkCheck, Hash } from "lucide-react";
 import PageHeader from "@/app/components/PageHeader";
+import { contentImages, pageImages } from "@/data/image";
 
 const ConferenceProceedings = () => {
   // Mapping to your image assets
-  const pageImages = {
-    proceedingsHero: "/newgirlimages/image-50.jpeg", // A3I themed image
+  const newImage = {
+    proceedingsHero: pageImages.adminSecretary, // A3I themed image
   };
 
   const researchPapers = [
@@ -25,7 +26,7 @@ const ConferenceProceedings = () => {
         title="Conference Proceedings"
         subtitle="A comprehensive repository of groundbreaking research from A3I 2025."
         breadcrumb="Home / Publication / Proceedings"
-        image={pageImages.proceedingsHero}
+        image={newImage.proceedingsHero}
       />
 
       <div className="max-w-7xl mx-auto px-6 mt-16 space-y-20">

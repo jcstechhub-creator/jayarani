@@ -1,6 +1,6 @@
 import React from 'react';
 import PageHeader from "@/app/components/PageHeader";
-import { activityImages } from "@/data/image";
+import { activityImages, contentImages } from "@/data/image";
 import { Leaf, Droplets, Wind, Recycle, Globe, BarChart3, Star } from 'lucide-react';
 
 const EcoClubPage = () => {
@@ -37,7 +37,9 @@ const EcoClubPage = () => {
         title="Eco-Club"
         subtitle="Pioneering environmental stewardship through student action"
         breadcrumb="Home / Clubs"
-        image={activityImages.ecoClub}
+        // image={activityImages.ecoClub}
+        
+                        image= {contentImages?.bookImage}
       />
 
       <main className="max-w-6xl mx-auto py-16 px-6">

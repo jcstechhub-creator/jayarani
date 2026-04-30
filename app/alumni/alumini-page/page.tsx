@@ -4,6 +4,7 @@ import React from "react";
 // import PageHeader from "@/components/PageHeader";
 import { Users, Target, Heart, Briefcase, Mail, Award, Globe } from "lucide-react";
 import PageHeader from "@/app/components/PageHeader";
+import { contentImages } from "@/data/image";
 
 const AlumniAssociation = () => {
     const stats = [
@@ -34,7 +35,8 @@ const AlumniAssociation = () => {
                 subtitle="Staying connected with our roots and building a proud tradition of excellence."
                 breadcrumb="Home / Community / Alumni"
                 // image="/newgirlimages/image-100.jpeg"
-                image="/banner/banner4.jpeg"
+                // image="/banner/banner4.jpeg"
+                image= {contentImages?.bookImage}
             />
 
             <div className="max-w-7xl mx-auto px-6 mt-16 space-y-20">

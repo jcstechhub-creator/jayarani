@@ -1,6 +1,6 @@
 import React from 'react';
 import PageHeader from "@/app/components/PageHeader";
-import { activityImages } from "@/data/image";
+import { activityImages, contentImages } from "@/data/image";
 import { Palette, Music, Camera, Theater, Star, Trophy, Users, Heart } from 'lucide-react';
 
 const FineArtsPage = () => {
@@ -42,7 +42,9 @@ const FineArtsPage = () => {
         title="Fine Arts & Culture"
         subtitle="Advancing cultural situatedness and student participation rates"
         breadcrumb="Home / Clubs"
-        image={activityImages.fineArts}
+        // image={activityImages.fineArts}
+        
+                        image= {contentImages?.bookImage}
       />
 
       <main className="max-w-6xl mx-auto py-16 px-6">

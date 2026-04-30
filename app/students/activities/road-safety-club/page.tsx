@@ -1,6 +1,6 @@
 import React from 'react';
 import PageHeader from "@/app/components/PageHeader";
-import { activityImages } from "@/data/image";
+import { activityImages, contentImages } from "@/data/image";
 import { ShieldAlert, Users, Truck, MapPin, Award, Star, Info } from 'lucide-react';
 
 const RoadSafetyClub = () => {
@@ -37,7 +37,9 @@ const RoadSafetyClub = () => {
         title="Road Safety Club"
         subtitle="Empowering students to advocate for traffic safety"
         breadcrumb="Home / Clubs"
-        image={activityImages.roadSafetyClub}
+        // image={activityImages.roadSafetyClub}
+        
+                        image= {contentImages?.bookImage}
       />
 
       <main className="max-w-6xl mx-auto py-16 px-6">

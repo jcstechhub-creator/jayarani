@@ -2,7 +2,7 @@
 
 import React from "react";
 import PageHeader from "@/app/components/PageHeader";
-import { pageImages } from "@/data/image";
+import { contentImages, pageImages } from "@/data/image";
 import { 
   ShieldAlert, 
   Gavel, 
@@ -48,7 +48,9 @@ export default function AntiRaggingCell() {
         title="Anti-Ragging Cell"
         subtitle="Zero tolerance towards ragging. Ensuring a safe, respectful, and protected campus environment."
         breadcrumb="Home / Student Support / Anti-Ragging"
-        image={pageImages.studentsAntiRagging}
+        // image={pageImages.studentsAntiRagging}
+        
+                        image= {contentImages?.bookImage}
       />
 
       {/* --- WARNING BANNER --- */}

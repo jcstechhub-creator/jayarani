@@ -1,6 +1,7 @@
 "use client";
 
 import PageHeader from "@/app/components/PageHeader";
+import { contentImages } from "@/data/image";
 import {
   Heart,
   Users,
@@ -21,7 +22,7 @@ export default function Page() {
         subtitle="Nurturing faith, values, and a meaningful life"
         breadcrumb="Home / Infant Jesus Power Cell"
         // image="/newgirlimages/image-69.jpeg"
-        image="/banner/banner4.jpeg"
+        image= {contentImages?.bookImage}
       />
 
       {/* Intro */}

@@ -1,6 +1,6 @@
 import React from 'react';
 import PageHeader from "@/app/components/PageHeader";
-import { activityImages } from "@/data/image";
+import { activityImages, contentImages } from "@/data/image";
 import { ShieldCheck, Trophy, Heart, Users, Zap, Award, Info } from 'lucide-react';
 
 const AntiDrugSports = () => {
@@ -37,7 +37,9 @@ const AntiDrugSports = () => {
         title="Anti-Drug Club"
         subtitle="Integrating physical excellence with social awareness"
         breadcrumb="Home / Clubs"
-        image={activityImages.antiDrugClub}
+        // image={activityImages.antiDrugClub}
+        
+                        image= {contentImages?.bookImage}
       />
 
       <main className="max-w-6xl mx-auto py-16 px-6">

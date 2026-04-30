@@ -1,7 +1,7 @@
 "use client";
 
 import PageHeader from "@/app/components/PageHeader";
-import { activityImages } from "@/data/image";
+import { activityImages, contentImages } from "@/data/image";
 import {
   Atom,
   Lightbulb,
@@ -19,7 +19,9 @@ export default function Page() {
         title="Science Club"
         subtitle="Igniting curiosity, innovation, and scientific thinking"
         breadcrumb="Home / Clubs"
-        image={activityImages.science}
+        // image={activityImages.science}
+        
+                        image= {contentImages?.bookImage}
       />
 
       {/* Intro */}

@@ -1,6 +1,6 @@
 import React from 'react';
 import PageHeader from "@/app/components/PageHeader";
-import { activityImages } from "@/data/image";
+import { activityImages, contentImages } from "@/data/image";
 import { Anchor, Users, Globe, Heart, Award, Star, FileText, Info } from 'lucide-react';
 
 const RotaractClub = () => {
@@ -42,7 +42,9 @@ const RotaractClub = () => {
         title="Rotaract Club"
         subtitle="Developing leadership through service and community impact"
         breadcrumb="Home / Clubs"
-        image={activityImages.rotaractClub}
+        // image={activityImages.rotaractClub}
+        
+                        image= {contentImages?.bookImage}
       />
 
       <main className="max-w-6xl mx-auto py-16 px-6">

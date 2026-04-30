@@ -1,7 +1,7 @@
 "use client";
 
 import PageHeader from "@/app/components/PageHeader";
-import { activityImages } from "@/data/image";
+import { activityImages, contentImages } from "@/data/image";
 import {
   BookOpen,
   Mic,
@@ -19,7 +19,9 @@ export default function Page() {
         title="The Literary Club"
         subtitle="A vibrant space for language, creativity, and expression"
         breadcrumb="Home / Clubs"
-        image={activityImages.literary}
+        // image={activityImages.literary}
+        
+                        image= {contentImages?.bookImage}
       />
 
       {/* Intro */}

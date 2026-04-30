@@ -1,6 +1,6 @@
 import React from 'react';
 import PageHeader from "@/app/components/PageHeader";
-import { activityImages } from "@/data/image";
+import { activityImages, contentImages } from "@/data/image";
 import { Book, Library, Users, PenTool, Award, Star, FileText, Info } from 'lucide-react';
 
 const ReaderClub = () => {
@@ -42,7 +42,9 @@ const ReaderClub = () => {
         title="Reader Club"
         subtitle="Cultivating critical thinking and a lifelong passion for literature"
         breadcrumb="Home / Clubs"
-        image={activityImages.readerClub}
+        // image={activityImages.readerClub}
+        
+                        image= {contentImages?.bookImage}
       />
 
       <main className="max-w-6xl mx-auto py-16 px-6">

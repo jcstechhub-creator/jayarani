@@ -1,6 +1,6 @@
 import React from 'react';
 import PageHeader from "@/app/components/PageHeader";
-import { activityImages } from "@/data/image";
+import { activityImages, contentImages } from "@/data/image";
 import { Trophy, Activity, Users, Map, Award, Star, Heart } from 'lucide-react';
 
 const SportsPage = () => {
@@ -37,7 +37,9 @@ const SportsPage = () => {
         title="Games & Sports"
         subtitle="Fostering competitive spirit and physical excellence"
         breadcrumb="Home / Clubs"
-        image={activityImages.gamesSports}
+        // image={activityImages.gamesSports}
+        
+                        image= {contentImages?.bookImage}
       />
 
       <main className="max-w-6xl mx-auto py-16 px-6">
