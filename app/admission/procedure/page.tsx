@@ -14,6 +14,7 @@ import {
   Download,
   ShieldCheck
 } from "lucide-react";
+import { pageImages } from "@/data/image";
 
 export default function AdmissionProcedure() {
   const steps = [
@@ -46,7 +47,8 @@ export default function AdmissionProcedure() {
         subtitle="Transparent, merit-based, and inclusive. Join the academic community at JCS."
         breadcrumb="Home / Admission / Procedure"
         // image="/newgirlimages/image-30.jpeg"
-        image="/banner/banner4.jpeg"
+        // image="/banner/banner4.jpeg"
+          image={pageImages.adminSecretary}
       />
 
       {/* --- THE JOURNEY MAP --- */}

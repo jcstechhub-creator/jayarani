@@ -1,6 +1,7 @@
 ﻿"use client";
 
 import PageHeader from "@/app/components/PageHeader";
+import { pageImages } from "@/data/image";
 import { Image as ImageIcon, Download } from "lucide-react";
 // import PageHeader from "@/components/PageHeader";
 
@@ -11,7 +12,9 @@ export default function ABCBannerPage() {
         title="ABC Banner"
         subtitle="Academic Bank of Credits - Your digital repository for academic wealth."
         breadcrumb="Home / UGC / ABC Banner"
-        image="/newgirlimages/image-50.jpeg"
+        // image="/newgirlimages/image-50.jpeg"
+        
+          image={pageImages.adminSecretary}
       />
 
       <div className="max-w-4xl mx-auto px-6 mt-12">

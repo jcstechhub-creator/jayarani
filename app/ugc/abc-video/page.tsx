@@ -1,6 +1,7 @@
 ﻿"use client";
 
 import PageHeader from "@/app/components/PageHeader";
+import { pageImages } from "@/data/image";
 import { PlayCircle, Info } from "lucide-react";
 
 export default function ABCVideoPage() {
@@ -11,7 +12,9 @@ export default function ABCVideoPage() {
         subtitle="Step-by-step video instructions for registering and managing your Academic Bank of Credits."
         breadcrumb="Home / UGC / ABC Video"
         // image="/newgirlimages/image-50.jpeg"
-        image="/banner/banner4.jpeg"
+        // image="/banner/banner4.jpeg"
+        
+                  image={pageImages.adminSecretary}
       />
 
       <div className="max-w-5xl mx-auto px-6 mt-12">

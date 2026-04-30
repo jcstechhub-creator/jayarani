@@ -9,6 +9,7 @@ import {
   Image as ImageIcon, Phone, ExternalLink,
   ChevronRight, FileText, Landmark, Scale
 } from "lucide-react";
+import { pageImages } from "@/data/image";
 
 export default function UGCDisclosurePage() {
   const disclosureCategories = [
@@ -41,7 +42,7 @@ export default function UGCDisclosurePage() {
         { label: "Details of Academic Programs", path: "/admission/programs" },
         { label: "Academic Calendar", path: "/academics/calendar" },
         { label: "Departments", path: "/academics/departments" },
-        { label: "Faculty Details", path: "/academics/faculty" },
+        { label: "Faculty Details", path: "/faculty-details" },
         { label: "IQAC Cell", path: "/iqac/about" },
       ]
     },
@@ -113,7 +114,9 @@ export default function UGCDisclosurePage() {
         subtitle="Transparent institutional data and statutory disclosures as per University Grants Commission mandates."
         breadcrumb="Home / Statutory / UGC Disclosure"
         // image="/newgirlimages/image-90.jpeg"
-        image="/banner/banner4.jpeg"
+        // image="/banner/banner4.jpeg"
+        
+                  image={pageImages.adminSecretary}
       />
 
       {/* --- INTRO SECTION --- */}

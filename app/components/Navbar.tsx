@@ -91,7 +91,7 @@ const navItems = [
           { label: "Commerce", path: "/academics/departments/commerce" },
         ],
       },
-      { label: "Faculty Details", path: "/academics/faculty" },
+      { label: "Faculty Details", path: "/faculty-details" },
       { label: "Academic Calendar", path: "/academics/calendar" },
       { label: "Syllabus", path: "/academics/syllabus" },
 
@@ -161,7 +161,7 @@ const navItems = [
       { label: "IPR ", path: "/innovation/ipr" },
       // { label: "enterperner develope skill", path: "/innovation/research" },
       { label: "Entrepreneurship Development Cell", path: "/innovation/edc" },
-      { label: "Earn While You Learn", path: "/innovation/learn-while-earn" },
+      { label: "Earn While You Learn", path: "/innovation/earn-while-you-learn" },
     ],
   },
   // {

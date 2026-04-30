@@ -15,7 +15,7 @@ import {
   X // Added for the close button
 } from "lucide-react";
 
-import {contentImages} from "@/data/image";
+import {contentImages, pageImages} from "@/data/image";
 import {aishe} from "@/data/image";
 import Image from "next/image";
 
@@ -41,7 +41,8 @@ export default function ProspectusPage() {
         breadcrumb="Home / Admission / Prospectus"
         // image="/newgirlimages/image-4.jpeg"
         // image="/banner/banner5.jpeg"
-        image="/banner/banner4.jpeg"
+          image={pageImages.adminSecretary}
+        // image="/banner/banner4.jpeg"
       />
 
      

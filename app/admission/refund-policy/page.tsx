@@ -13,6 +13,7 @@ import {
   ArrowDownToLine,
   ShieldCheck
 } from "lucide-react";
+import { pageImages } from "@/data/image";
 
 export default function FeeRefundPolicy() {
   // Synchronized with UGC 2025-26 Guidelines from PDF  
@@ -31,7 +32,8 @@ export default function FeeRefundPolicy() {
         subtitle="Standardized guidelines for academic session 2025-26 as per University Grants Commission norms."
         breadcrumb="Home / Admission / Refund Policy"
         // image="/newgirlimages/image-2.jpeg"
-        image="/banner/banner4.jpeg"
+        // image="/banner/banner4.jpeg"
+          image={pageImages.adminSecretary}
       />
 
       {/* --- REGULATORY ALIGNMENT --- */}

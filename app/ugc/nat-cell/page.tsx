@@ -1,6 +1,7 @@
 ﻿"use client";
 
 import PageHeader from "@/app/components/PageHeader";
+import { pageImages } from "@/data/image";
 import { Users, Briefcase, ChevronRight } from "lucide-react";
 export default function NATCellPage() {
   return (
@@ -10,8 +11,9 @@ export default function NATCellPage() {
         subtitle="Empowering students through National Apprenticeship Training and industry integration."
         breadcrumb="Home / UGC / NAT Cell"
         // image="/newgirlimages/image-10.jpeg"
-        image="/banner/banner4.jpeg"
-      />
+          
+                    image={pageImages.adminSecretary}
+        />
 
       <div className="max-w-4xl mx-auto px-6 mt-12">
         <div className="bg-[#2F4A8A] rounded-3xl p-10 text-white mb-8 shadow-xl">

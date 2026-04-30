@@ -232,6 +232,7 @@ export const pageImages = {
 };
 
 export const contentImages = {
+  bookImage: "/banner/bookimage.jpeg",
   propspects: "/gallery/poster2.jpeg",
   awards: "/gallery/awards.jpeg",
   hostelRoom: "/newgirlimages/image-103.jpeg",

@@ -41,7 +41,7 @@ export default function AcademicsPage() {
       title: "Faculty Excellence",
       desc: "Profiles of our dedicated educators committed to academic and moral growth.",
       icon: Users,
-      path: "/academics/faculty",
+      path: "/faculty-details",
       color: "bg-purple-50 text-purple-600"
     }
   ];

@@ -3,10 +3,11 @@
 import React from "react";
 import PageHeader from "@/app/components/PageHeader";
 import { Award, BookOpen, Cpu, ShieldCheck, Microscope, Users, Quote } from "lucide-react";
+import { pageImages } from "@/data/image";
 
 const CollegeMagazine = () => {
   const magazineImages = {
-    hero: "/banner/banner4.jpeg",
+    hero:  pageImages.adminSecretary,
     award: "/newgirlimages/award_2025.jpg",
     conference: "/newgirlimages/image-50.jpeg",
   };
