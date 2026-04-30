@@ -1,6 +1,7 @@
 import React from 'react';
 import { GraduationCap, Briefcase, TrendingUp, Trophy, Star, ClipboardList } from 'lucide-react';
 import PageHeader from '@/app/components/PageHeader';
+import { contentImages } from '@/data/image';
 
 const StudentOutcomes = () => {
   const primaryOutcomes = [
@@ -38,7 +39,10 @@ const StudentOutcomes = () => {
   breadcrumb="Home / Quality / Student-Outcomes"
   // Using an image that reflects professional graduation, success, and career transition
   // image="/newgirlimages/image-30.jpeg" 
-  image="/banner/banner4.jpeg"
+  // image="/banner/banner4.jpeg
+  // 
+                  image= {contentImages?.bookImage}
+
 />
    
     <div className="bg-slate-50 min-h-screen p-8 font-sans">

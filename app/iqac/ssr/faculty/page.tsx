@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import { Mail, GraduationCap, Award, BookOpen, Search } from 'lucide-react';
 import PageHeader from '@/app/components/PageHeader';
+import { contentImages } from '@/data/image';
 
 const FacultyPage = () => {
   const [searchTerm, setSearchTerm] = useState("");
@@ -53,7 +54,9 @@ const FacultyPage = () => {
   breadcrumb="Home / About / Faculty"
   // Using an image that reflects professional academic mentorship and collaboration
   // image="/newgirlimages/image-41.jpeg"
-  image="/banner/banner4.jpeg" 
+  // image="/banner/banner4.jpeg"
+  
+                  image= {contentImages?.bookImage} 
 />
 
       {/* Search Bar */}

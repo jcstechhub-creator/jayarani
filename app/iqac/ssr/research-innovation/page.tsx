@@ -1,6 +1,7 @@
 import React from 'react';
 import { Microscope, FileText, Lightbulb, Rocket, Users, Globe } from 'lucide-react';
 import PageHeader from '@/app/components/PageHeader';
+import { contentImages } from '@/data/image';
 
 const ResearchInnovation = () => {
   const outcomeMetrics = [
@@ -38,7 +39,9 @@ const ResearchInnovation = () => {
   breadcrumb="Home / Research / Innovation"
   // Using an image that reflects modern laboratory research, digital innovation, and scholarly collaboration
   // image="/newgirlimages/image-58.jpeg"
-  image="/banner/banner4.jpeg" 
+  // image="/banner/banner4.jpeg" 
+  
+                  image= {contentImages?.bookImage}
 />
     <div className="bg-slate-50 min-h-screen p-8 font-sans">
       {/* Header */}

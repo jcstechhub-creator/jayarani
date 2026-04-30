@@ -1,6 +1,7 @@
 import React from 'react';
 import { Lightbulb, ClipboardCheck, Users, Monitor, ShieldAlert, Award } from 'lucide-react';
 import PageHeader from '@/app/components/PageHeader';
+import { contentImages } from '@/data/image';
 
 const LearningTeaching = () => {
   const metrics = [
@@ -33,7 +34,9 @@ const LearningTeaching = () => {
   breadcrumb="Home / Academics / Learning-Teaching"
   // Using an image that reflects interactive, ICT-enabled, and collaborative learning
   // image="/newgirlimages/image-61.jpeg" 
-  image="/banner/banner4.jpeg"
+  // image="/banner/banner4.jpeg"
+  
+                  image= {contentImages?.bookImage}
 />
       {/* Header Section */}
       <div className="max-w-6xl mx-auto mb-12 text-center">

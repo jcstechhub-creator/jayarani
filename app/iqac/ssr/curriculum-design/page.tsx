@@ -1,4 +1,5 @@
 import PageHeader from '@/app/components/PageHeader';
+import { contentImages } from '@/data/image';
 import React from 'react';
 
 const CurriculumDesign = () => {
@@ -18,7 +19,9 @@ const CurriculumDesign = () => {
   breadcrumb="Home / Quality / IQAC"
   // Using an image that reflects professional coordination and systemic quality management
   // image="/newgirlimages/image-49.jpeg" 
-  image="/banner/banner4.jpeg"
+  // image="/banner/banner4.jpeg"
+  
+                  image= {contentImages?.bookImage}
 />
     <div className="max-w-6xl mx-auto p-6 bg-gray-50 min-h-screen">
       {/* Header Section */}
