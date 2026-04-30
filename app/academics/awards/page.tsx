@@ -75,7 +75,7 @@ export default function AwardsPage() {
               <img
                 src={contentImages?.awards}
                 alt="Award Ceremony"
-                className="w-full h-auto object-cover max-h-[500px]"
+                className="w-full h-auto object-cover min-h-[500px]"
               />
               <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-[#1A2E5A]/80 to-transparent p-12">
                 <p className="text-white text-xl font-medium italic">"Quality is not an act, it is a habit."</p>
@@ -84,7 +84,7 @@ export default function AwardsPage() {
           </div>
 
           {/* Awards Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+          {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
             {awards.map((award, index) => (
               <div
                 key={index}
@@ -109,7 +109,7 @@ export default function AwardsPage() {
                 </div>
               </div>
             ))}
-          </div>
+          </div> */}
 
         </div>
       </section>

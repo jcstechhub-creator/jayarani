@@ -1,18 +1,26 @@
 "use client";
 import { useEffect, useState } from "react";
 import { contentImages } from "@/data/image";
-
+import { useRouter } from 'next/navigation';
 export default function PopupPoster() {
   const [isVisible, setIsVisible] = useState(false);
   const [isAnimating, setIsAnimating] = useState(false);
 
-  useEffect(() => {
+ const router = useRouter();
+useEffect(() => {
+  const hasSeenPopup = sessionStorage.getItem("hasSeenPopup");
+
+  if (!hasSeenPopup) {
     const timer = setTimeout(() => {
       setIsVisible(true);
       setTimeout(() => setIsAnimating(true), 10);
+
+      sessionStorage.setItem("hasSeenPopup", "true");
     }, 3000);
+
     return () => clearTimeout(timer);
-  }, []);
+  }
+}, []);
 
   const handleClose = () => {
     setIsAnimating(false);
@@ -67,7 +75,7 @@ export default function PopupPoster() {
           </p>
 
           <div className="mt-10 flex flex-col sm:flex-row gap-4">
-            <button className="px-10 py-4 bg-blue-900 hover:bg-blue-800 text-white font-bold rounded-2xl shadow-2xl shadow-blue-200 transition-all active:scale-95 text-center">
+            <button onClick={() => {  router.push('/admission/programs') }} className="px-10 py-4 bg-blue-900 hover:bg-blue-800 text-white font-bold rounded-2xl shadow-2xl shadow-blue-200 transition-all active:scale-95 text-center">
               Apply Now
             </button>
             <button
