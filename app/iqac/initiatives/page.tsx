@@ -13,6 +13,7 @@ import {
   ShieldCheck,
   ArrowUpRight
 } from "lucide-react";
+import { pageImages } from "@/data/image";
 
 export default function QualityInitiatives() {
   const initiatives = [
@@ -49,7 +50,9 @@ export default function QualityInitiatives() {
         subtitle="Catalytic improvements and strategic actions for institutional excellence."
         breadcrumb="Home / IQAC / Initiatives"
         // image="/newgirlimages/image-54.jpeg"
-        image="/banner/banner4.jpeg"
+        // image="/banner/banner4.jpeg"
+        
+                image = { pageImages.adminSecretary}
       />
 
       {/* --- STRATEGIC FOCUS SECTION --- */}

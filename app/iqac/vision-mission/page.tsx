@@ -12,6 +12,7 @@ import {
   CheckCircle2,
   Lightbulb
 } from "lucide-react";
+import { pageImages } from "@/data/image";
 
 export default function IQACVisionMission() {
   const missionPoints = [
@@ -54,7 +55,9 @@ export default function IQACVisionMission() {
         subtitle="The guiding principles for maintaining academic excellence and quality culture."
         breadcrumb="Home / IQAC / Vision & Mission"
         // image="/newgirlimages/image-47.jpeg"
-        image="/banner/banner4.jpeg"
+        // image="/banner/banner4.jpeg"
+        
+                image = { pageImages.adminSecretary}
       />
 
       {/* --- VISION SECTION --- */}

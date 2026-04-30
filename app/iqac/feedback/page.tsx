@@ -3,6 +3,7 @@
 import React from "react";
 import { ClipboardCheck, Users, GraduationCap, ExternalLink, MessageSquareQuote } from "lucide-react";
 import PageHeader from "@/app/components/PageHeader";
+import { pageImages } from "@/data/image";
 
 const IQACFeedback = () => {
   const feedbackLinks = [
@@ -29,7 +30,8 @@ const IQACFeedback = () => {
         subtitle="Your voice shapes the future of Jayarani Arts and Science College."
         breadcrumb="Home / IQAC / Feedback"
         // image="/newgirlimages/image-100.jpeg"
-        image="/banner/banner4.jpeg"
+        // image="/banner/banner4.jpeg"
+        image = { pageImages.adminSecretary}
       />
 
       <div className="max-w-6xl mx-auto px-6 mt-16">

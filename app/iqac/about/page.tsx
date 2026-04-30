@@ -12,6 +12,7 @@ import {
   CheckCircle2,
   CalendarDays
 } from "lucide-react";
+import { pageImages } from "@/data/image";
 
 export default function AboutIQAC() {
   const coreFunctions = [
@@ -44,7 +45,9 @@ export default function AboutIQAC() {
         subtitle="The Internal Quality Assurance Cell: Consistently working for catalytic institutional improvement."
         breadcrumb="Home / IQAC / About"
         // image="/newgirlimages/image-49.jpeg"
-        image="/banner/banner4.jpeg"
+        // image="/banner/banner4.jpeg"
+        
+                image = { pageImages.adminSecretary}
       />
 
       {/* --- CELL INTRODUCTION --- */}

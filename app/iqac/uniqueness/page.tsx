@@ -12,6 +12,7 @@ import {
   ShieldCheck,
   CheckCircle2
 } from "lucide-react";
+import { pageImages } from "@/data/image";
 
 export default function UniquenessJCS() {
   return (
@@ -21,7 +22,9 @@ export default function UniquenessJCS() {
         subtitle="Exploring the distinct values and best practices that define the Jayarani spirit."
         breadcrumb="Home / IQAC / Uniqueness"
         // image="/newgirlimages/image-5.jpeg"
-        image="/banner/banner4.jpeg"
+        // image="/banner/banner4.jpeg"
+        
+                image = { pageImages.adminSecretary}
       />
 
       {/* --- CORE PHILOSOPHY --- */}

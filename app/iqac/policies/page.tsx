@@ -14,6 +14,7 @@ import {
   Download,
   Info
 } from "lucide-react";
+import { pageImages } from "@/data/image";
 
 export default function IQACPolicies() {
 
@@ -71,7 +72,9 @@ export default function IQACPolicies() {
         subtitle="The regulatory framework guiding the quality and ethical standards of Jayarani College."
         breadcrumb="Home / IQAC / Policies"
         // image="/newgirlimages/image-90.jpeg"
-        image="/banner/banner4.jpeg"
+        // image="/banner/banner4.jpeg"
+        
+                image = { pageImages.adminSecretary}
       />
 
       {/* --- PREAMBLE SECTION --- */}

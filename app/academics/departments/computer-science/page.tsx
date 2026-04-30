@@ -15,6 +15,7 @@ import {
   BrainCircuit,
   Network
 } from "lucide-react";
+import { pageImages } from "@/data/image";
 
 export default function ComputerSciencePage() {
   const specializedLabs = [
@@ -41,7 +42,9 @@ export default function ComputerSciencePage() {
         title="Dept. of Computer Science"
         subtitle="Empowering women to lead the digital revolution through logic and innovation."
         breadcrumb="Home / Academics / Departments / Computer Science"
-        image="/banner/banner4.jpeg"
+        // image="/banner/banner4.jpeg"
+        
+                image = { pageImages.adminSecretary}
         
       />
 

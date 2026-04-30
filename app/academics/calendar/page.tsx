@@ -4,6 +4,7 @@ import React, { useState } from "react";
 // import PageHeader from "@/components/PageHeader";
 import { Calendar, Search, Filter, Clock, GraduationCap, AlertTriangle } from "lucide-react";
 import PageHeader from "@/app/components/PageHeader";
+import { pageImages } from "@/data/image";
 
 const AcademicCalendarPage = () => {
   const [searchTerm, setSearchTerm] = useState("");
@@ -38,7 +39,10 @@ const AcademicCalendarPage = () => {
         subtitle="2026 - 2027 Schedule of Events, Examinations, and Holidays."
         breadcrumb="Home / Academics / Calendar"
         // image="/newgirlimages/image-80.jpeg"
-        image="/banner/banner4.jpeg"
+        // image="/banner/banner4.jpeg"
+        
+                image = { pageImages.adminSecretary}
+
       />
 
       <div className="max-w-7xl mx-auto px-6 mt-12 space-y-8">
