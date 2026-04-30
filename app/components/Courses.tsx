@@ -25,7 +25,7 @@ function Courses() {
 
   const features = [
     {
-      title: "Life at JCsS",
+      title: "Life at JCSss",
       desc: "At Jayarani College, life is more than just lectures and labs...",
       image: "/newgirlimages/image-100.jpeg",
     },
