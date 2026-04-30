@@ -41,7 +41,7 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
       {/* SIDEBAR */}
       <aside className={`${isSidebarOpen ? "w-64" : "w-20"} bg-[#1E3A8A] text-white transition-all duration-300 ease-in-out flex flex-col z-50 shadow-xl`}>
         <div className="p-5 flex items-center justify-between border-b border-white/10">
-          {isSidebarOpen && <span className="font-bold text-lg tracking-tight">JRC ADMIN</span>}
+          {isSidebarOpen && <span className="font-bold text-lg tracking-tight">JCS ADMIN</span>}
           <button onClick={() => setSidebarOpen(!isSidebarOpen)} className="p-1.5 hover:bg-white/10 rounded-md transition-colors">
             {isSidebarOpen ? <X size={20} /> : <Menu size={20} />}
           </button>
