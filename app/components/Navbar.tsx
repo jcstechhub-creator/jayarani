@@ -179,10 +179,8 @@ const navItems = [
   {
     label: "Alumni/ae",
     icon: AlumniIcon,
-    children: [
-      { label: "Registration Form", path: "/alumni/register" },
-      { label: "About", path: "/alumni/alumini-page" },
-    ],
+    path: "/alumni/alumini-page"
+  
   },
   {
     label: "Publication",

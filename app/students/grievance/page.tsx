@@ -191,9 +191,11 @@ export default function GrievanceRedressal() {
              <button className="bg-[#2F4A8A] text-white px-10 py-4 rounded-full font-bold text-xs uppercase tracking-widest hover:bg-[#1A2E5A] transition-all">
                Email the Principal
              </button>
+             <a href="https://forms.gle/H9RLV4DQ48C29fwd8">
              <button className="border border-slate-200 text-slate-700 px-10 py-4 rounded-full font-bold text-xs uppercase tracking-widest hover:bg-slate-50 transition-all">
-               Cell Convener Details
+              Grievance Redressal Register
              </button>
+             </a>
           </div>
         </div>
       </section>

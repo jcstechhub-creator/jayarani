@@ -2,7 +2,7 @@
 
 import React from "react";
 // import PageHeader from "@/components/PageHeader";
-import { Users, Target, Heart, Briefcase, Mail, Award, Globe } from "lucide-react";
+import { Users, Target, Heart, Briefcase, Mail, Award, Globe, ClipboardEdit } from "lucide-react";
 import PageHeader from "@/app/components/PageHeader";
 import { contentImages, pageImages } from "@/data/image";
 
@@ -126,23 +126,38 @@ const AlumniAssociation = () => {
                 </section>
 
                 {/* CTA Footer */}
-                <section className="bg-slate-900 rounded-[3rem] p-12 text-white text-center relative overflow-hidden">
-                    <div className="relative z-10">
-                        <h2 className="text-3xl font-bold mb-4">Reconnect with Your Roots</h2>
-                        <p className="text-slate-400 max-w-xl mx-auto mb-8 leading-relaxed">
-                            Join us in preserving our legacy and being part of a proud tradition of excellence.
-                            We look forward to welcoming you home.
-                        </p>
-                        <a
-                            href="mailto:alumni@jcs.edu.in"
-                            className="inline-flex items-center gap-2 px-8 py-4 bg-white text-slate-900 rounded-2xl font-bold hover:bg-blue-50 transition shadow-xl"
-                        >
-                            <Mail size={20} />
-                            alumni@jcs.edu.in
-                        </a>
-                    </div>
-                    <Users className="absolute -right-20 -bottom-20 w-80 h-80 text-white/5 -rotate-12" />
-                </section>
+         <section className="bg-slate-900 rounded-[3rem] p-12 text-white text-center relative overflow-hidden">
+    <div className="relative z-10">
+        <h2 className="text-3xl font-bold mb-4">Reconnect with Your Roots</h2>
+        <p className="text-slate-400 max-w-xl mx-auto mb-8 leading-relaxed">
+            Join us in preserving our legacy and being part of a proud tradition of excellence.
+            We look forward to welcoming you home.
+        </p>
+        
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            {/* Google Form Button */}
+            <a
+                href="https://forms.gle/5pUeVaSgLihQrUb2A"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-8 py-4 bg-blue-600 text-white rounded-2xl font-bold hover:bg-blue-700 transition shadow-xl border border-blue-500/20"
+            >
+                <ClipboardEdit size={20} />
+              Enrolled Yourself
+            </a>
+
+            {/* Email Button */}
+            <a
+                href="mailto:alumni@jcs.edu.in"
+                className="inline-flex items-center gap-2 px-8 py-4 bg-white text-slate-900 rounded-2xl font-bold hover:bg-slate-100 transition shadow-xl"
+            >
+                <Mail size={20} />
+                alumni@jcs.edu.in
+            </a>
+        </div>
+    </div>
+    <Users className="absolute -right-20 -bottom-20 w-80 h-80 text-white/5 -rotate-12" />
+</section>
             </div>
         </div>
     );
