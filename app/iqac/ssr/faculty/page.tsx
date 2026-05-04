@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from 'react';
-import { Mail, GraduationCap, Award, BookOpen, Search } from 'lucide-react';
+import { Mail, GraduationCap, Award, BookOpen, Search, Users, TrendingUp, Heart, Wallet, Globe } from 'lucide-react';
 import PageHeader from '@/app/components/PageHeader';
 import { pageImages } from '@/data/image';
 
@@ -48,16 +48,12 @@ const FacultyPage = () => {
 
   return (
     <div className="bg-gray-50 min-h-screen">
-    <PageHeader
-  title="Our Distinguished Faculty"
-  subtitle="Dedicated educators fostering an environment of academic excellence, innovation, and moral integrity, aligned with NAAC Attribute 02 standards for faculty resources."
-  breadcrumb="Home / About / Faculty"
-  // Using an image that reflects professional academic mentorship and collaboration
-  // image="/newgirlimages/image-41.jpeg"
-  // image="/banner/banner4.jpeg"
-  
-                  image={pageImages.adminSecretary} 
-/>
+      <PageHeader
+        title="Our Distinguished Faculty"
+        subtitle="Dedicated educators fostering an environment of academic excellence and moral integrity."
+        breadcrumb="Home / About / Faculty"
+        image={pageImages.adminSecretary} 
+      />
 
       {/* Search Bar */}
       <div className="max-w-6xl mx-auto -mt-8 px-6">
@@ -65,7 +61,7 @@ const FacultyPage = () => {
           <Search className="text-gray-400 ml-2" />
           <input 
             type="text" 
-            placeholder="Search by name or specialization (e.g., Ethics, Sustainability)..."
+            placeholder="Search by name or specialization..."
             className="w-full p-2 ml-4 outline-none text-gray-700"
             onChange={(e) => setSearchTerm(e.target.value)}
           />
@@ -119,25 +115,60 @@ const FacultyPage = () => {
           ))}
         </div>
 
-        {/* Professional Standards Section */}
-        <section className="mt-20 p-10 bg-white rounded-3xl border border-blue-100 shadow-sm">
-          <div className="grid md:grid-cols-2 gap-10 items-center">
-            <div>
-              <h2 className="text-2xl font-bold text-gray-800 mb-4">Faculty Excellence & Ethics</h2>
-              <p className="text-gray-600 leading-relaxed italic">
-                "Our faculty members actively participate in Academic Audits and Faculty Development 
-                Programmes (FDPs) to ensure the highest teaching-learning standards. They are 
-                pioneers in research and community initiatives like the Honesty Shop and Environmental Audits."
+        {/* --- NEW SECTION: INSTITUTIONAL STANDARDS --- */}
+        <section className="mt-24">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900">Faculty Empowerment & Standards</h2>
+            <p className="text-gray-500 mt-2">Our commitment to professional growth and institutional quality.</p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {/* Diversity */}
+            <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
+              <Globe className="w-8 h-8 text-indigo-600 mb-4" />
+              <h4 className="font-bold text-lg mb-2">Faculty Diversity</h4>
+              <p className="text-gray-600 text-sm leading-relaxed">
+                We pride ourselves on a diverse talent pool representing various cultural and academic backgrounds across India.
               </p>
             </div>
-            <div className="grid grid-cols-2 gap-4">
-              <div className="p-4 bg-blue-50 rounded-xl text-center">
-                <span className="block text-2xl font-bold text-blue-900 italic">IPR</span>
-                <span className="text-xs text-blue-600 uppercase">Research Focused</span>
+
+            {/* Pay and Allowances */}
+            <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
+              <Wallet className="w-8 h-8 text-green-600 mb-4" />
+              <h4 className="font-bold text-lg mb-2">Pay & Allowances</h4>
+              <p className="text-gray-600 text-sm leading-relaxed">
+                Competitive salary structures as per institutional norms, including PF, insurance, and performance-based incentives.
+              </p>
+            </div>
+
+            {/* FDP */}
+            <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
+              <TrendingUp className="w-8 h-8 text-blue-600 mb-4" />
+              <h4 className="font-bold text-lg mb-2">Faculty Development</h4>
+              <p className="text-gray-600 text-sm leading-relaxed">
+                Ongoing FDPs and Research grants to ensure our educators stay at the forefront of pedagogical innovation.
+              </p>
+            </div>
+
+            {/* Retention */}
+            <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
+              <Heart className="w-8 h-8 text-red-600 mb-4" />
+              <h4 className="font-bold text-lg mb-2">Faculty Retention</h4>
+              <p className="text-gray-600 text-sm leading-relaxed">
+                With a 90% retention rate, we offer a supportive work culture that fosters long-term career stability and growth.
+              </p>
+            </div>
+
+            {/* Ratio */}
+            <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 lg:col-span-2 flex items-center gap-6">
+              <div className="bg-blue-900 p-6 rounded-xl text-white">
+                <Users className="w-10 h-10" />
               </div>
-              <div className="p-4 bg-blue-50 rounded-xl text-center">
-                <span className="block text-2xl font-bold text-blue-900 italic">NAAC</span>
-                <span className="text-xs text-blue-600 uppercase">Quality Driven</span>
+              <div>
+                <h4 className="font-bold text-lg mb-1">Faculty-Student Ratio</h4>
+                <p className="text-gray-600 text-sm leading-relaxed">
+                  We maintain an optimal <strong>1:20 ratio</strong> to ensure personalized mentorship and academic guidance for every student.
+                </p>
               </div>
             </div>
           </div>
