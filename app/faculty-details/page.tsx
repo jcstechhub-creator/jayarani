@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import { GraduationCap, ShieldCheck, Award, BookOpen, UserCheck, ArrowUpRight } from "lucide-react";
-import PageHeader from "../components/PageHeader";
+// import PageHeader from "../components/PageHeader";
 import { pageImages } from "@/data/image";
 // import PageHeader from "../components/PageHeader";
 
@@ -11,9 +11,9 @@ const FacultyDetailsPremium = () => {
   const facultyData = [
     { id: 1, name: "Dr. Sr. A. Jothi Mary", qual: "M.Com., M.Ed., M.Phil., Ph.D.", desig: "Secretary", dept: "Administration", honors: "FIHM Management" },
     { id: 2, name: "Dr. Sr. A. Jenitta", qual: "M.E., Ph.D.", desig: "Principal", dept: "Administration", honors: "Principal I/C" },
-    { id: 3, name: "Dr. D. Arul Pon Daniel", qual: "MCA, MBA, Ph.D., BCS", desig: "Vice Principal & Asst. Professor", dept: "Computer Science", honors: "IQAC Coordinator" },
-    { id: 4, name: "Ms. M. Syedalifathima", qual: "M.Sc., M.Phil.", desig: "Asst. Professor & Head", dept: "Computer Science", honors: "NIRF & AISHE Coordinator" },
-    { id: 5, name: "Ms. C. Sariga", qual: "MCA., M.Phil.", desig: "Asst. Professor", dept: "Computer Science", honors: "JCS Tech Hub" },
+    { id: 3, name: "Dr. D. Arul Pon Daniel", qual: "MCA, MBA, Ph.D., BCS", desig: "Asst. Professor & Vice Principal", dept: "Computer Science", honors: "IQAC Coordinator" },
+    { id: 4, name: "Ms. M. Syedalifathima", qual: "M.Sc., M.Phil.", desig: "Asst. Professor & Head", dept: "Computer Science", honors: "eGovernance, Anti Sexual Harassment Cell Coordinator" },
+    { id: 5, name: "Ms. C. Sariga", qual: "MCA., M.Phil.", desig: "Asst. Professor", dept: "Computer Science", honors: "JCS Tech Hub, UMIS Correspondence, Examination Cell, Anti Drug, Grievance Redressal" },
     { id: 6, name: "Ms. A. Ancy Buela", qual: "MCA", desig: "Asst. Professor", dept: "Computer Science", honors: "MOOC Programmes" },
     { id: 7, name: "Dr. N. Shanthi", qual: "M.Com., M.Phil., Ph.D., NET", desig: "Asst. Professor & Head", dept: "Commerce", honors: "Senior Faculty" },
     { id: 8, name: "Ms. S. Sathya", qual: "M.Com., M.Phil.", desig: "Asst. Professor", dept: "Commerce", honors: "Dean of Students" },
@@ -21,14 +21,14 @@ const FacultyDetailsPremium = () => {
     { id: 10, name: "Ms. S. Karthika", qual: "M.Com., B.Ed.", desig: "Asst. Professor", dept: "Commerce", honors: "Placement Cell" },
     { id: 11, name: "Ms. R. Kalaivani", qual: "M.Com.", desig: "Asst. Professor", dept: "Commerce", honors: "Dept. Coordinator" },
     { id: 12, name: "Dr. C. Bavithra", qual: "M.Sc., M.Phil., Ph.D.", desig: "Asst. Professor & Head", dept: "Mathematics", honors: "Public Relations Officer" },
-    { id: 13, name: "Ms. T. Poornima", qual: "M.Sc., M.Phil.", desig: "Asst. Professor", dept: "Mathematics", honors: "NAAC Coordinator" },
+    { id: 13, name: "Ms. T. Poornima", qual: "M.Sc., M.Phil.", desig: "Asst. Professor", dept: "Mathematics", honors: "Admission Cell, Alumni Association & NAAC Coordinator" },
     { id: 14, name: "Ms. N. Sabana Banu", qual: "M.Sc., M.Phil.", desig: "Asst. Professor", dept: "Mathematics", honors: "Science Club" },
     { id: 15, name: "Dr. S. Vimala", qual: "M.A., M.Phil, NET., Ph.D.", desig: "Asst. Professor & Head", dept: "Tamil", honors: "Literary Club" },
     { id: 16, name: "Ms. C. Priyadharshini", qual: "M.A., M.Phil.", desig: "Asst. Professor & Head", dept: "English", honors: "Magazine Editor" },
     { id: 17, name: "Ms. R. Pooja", qual: "M.A.", desig: "Asst. Professor", dept: "English", honors: "Placement Support" },
     { id: 18, name: "Ms. M. Aalees Simron", qual: "M.A.", desig: "Asst. Professor", dept: "English", honors: "Fine Arts" },
     { id: 19, name: "Ms. T. Jagateswari", qual: "M.L.I.S., M.A., M.Phil.", desig: "Librarian", dept: "Support Staff", honors: "Library Head" },
-    { id: 20, name: "Mr. A. Victor Emmanuvel", qual: "M.P.Ed.", desig: "Physical Director", dept: "Support Staff", honors: "Sports Day Convener" }
+    { id: 20, name: "Mr. A. Victor Emmanuvel", qual: "M.P.Ed.", desig: "Physical Director", dept: "Support Staff", honors: "Sports & Games Convener" }
   ];
 
   const depts = ["All", "Administration", "Computer Science", "Commerce", "Mathematics", "English", "Tamil", "Support Staff"];
