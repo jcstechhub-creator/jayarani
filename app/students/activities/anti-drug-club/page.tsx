@@ -78,7 +78,7 @@ const AntiDrugSports = () => {
                   <span className="text-[10px] text-slate-500 uppercase font-bold">Campus Vigilance</span>
                 </div>
                 <div className="border-l-4 border-red-600 pl-4">
-                  <span className="block text-3xl font-bold">05+</span>
+                  <span className="block text-3xl font-bold">04+</span>
                   <span className="text-[10px] text-slate-500 uppercase font-bold">Adopted Villages</span>
                 </div>
               </div>

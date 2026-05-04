@@ -157,12 +157,22 @@ const navItems = [
     icon: Lightbulb,
     children: [
       { label: "JCS Tech Hub", path: "/innovation/jcs-techhub" },
-      { label: "IIC", path: "/innovation/iic" },
-      { label: "Incubation ", path: "/innovation/incubation" },
-      { label: "IPR ", path: "/innovation/ipr" },
-      // { label: "enterperner develope skill", path: "/innovation/research" },
-      { label: "Entrepreneurship Development Cell", path: "/innovation/edc" },
+      
+      { label: "Entrepreneurship Development Cell", path: "/innovation/edc",
+             subChildren: [
+          {  label: "IIC", path: "/innovation/iic" },
+         { label: "IPR ", path: "/innovation/ipr" },
+         
+        ],
+        
+
+       },
+       
       { label: "Earn While You Learn", path: "/innovation/earn-while-you-learn" },
+   
+      { label: "Incubation ", path: "/innovation/incubation" },
+    
+      // { label: "enterperner develope skill", path: "/innovation/research" },
     ],
   },
   // {
@@ -248,9 +258,9 @@ export default function Navbar() {
             <div className="max-w-[95%] mx-auto px-4 h-10 flex items-center justify-between text-[11px] font-bold tracking-tight overflow-visible">
               <div className="flex items-center gap-6 text-gray-500">
                 <Link href="/aishe" className="hover:text-[#2F4A8A] transition-colors">AISHE</Link>
-                {/* <Link href="/nirf" className="hover:text-[#2F4A8A] transition-colors">NIRF</Link> */}
+                <Link href="/nirf" className="hover:text-[#2F4A8A] transition-colors">NIRF</Link>
                 {/* <Link href="/ssr" className="hover:text-[#2F4A8A] transition-colors">SSR</Link> */}
-                <Link href="/naac" className="hover:text-[#2F4A8A] transition-colors">NAAC</Link>
+                {/* <Link href="/naac" className="hover:text-[#2F4A8A] transition-colors">NAAC</Link> */}
 
                 {/* SSR Criteria Wise with dropdown */}
                 <div

@@ -247,7 +247,7 @@ export const contentImages = {
   studentsWomenEmpowermentGuidance: "/newgirlimages/image-90.jpeg",
   aboutUsIntro: "/newgirlimages/image-70.jpeg",
   swayamLogo: "/courses/swayam.png",
-};
+}; 
 
 export const courseImages = {
   baEnglish: "/newgirlimages/image-30.jpeg",
@@ -287,6 +287,18 @@ export const aishe = [
   "/pdf/aishe19-20.pdf",
   "/pdf/poster2.pdf",
 ]
+  export const mag = [
+    "/pdf/2024-aug.pdf",
+    "/pdf/2024-sep.pdf",
+    "/pdf/2024-oct.pdf",
+    "/pdf/2024-nov.pdf",
+    "/pdf/2025-may.pdf",
+    "/pdf/2025-june.pdf",
+    "/pdf/2025-july.pdf",
+    "/pdf/2025-aug.pdf",
+    "/pdf/2025-sep.pdf",
+    "/pdf/2025-oct.pdf",
+  ]
 
 export const qrImage = [
 

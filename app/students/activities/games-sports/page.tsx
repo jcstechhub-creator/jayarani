@@ -73,10 +73,10 @@ const SportsPage = () => {
                 and graduation rates influenced by sports scholarship and excellence.
               </p>
               <div className="flex space-x-8">
-                <div className="border-l-4 border-[#F59E0B] pl-4">
+                {/* <div className="border-l-4 border-[#F59E0B] pl-4">
                   <span className="block text-3xl font-bold">25+</span>
                   <span className="text-[10px] text-slate-500 uppercase font-bold">State/National Medals</span>
-                </div>
+                </div> */}
                 <div className="border-l-4 border-[#F59E0B] pl-4">
                   <span className="block text-3xl font-bold">100%</span>
                   <span className="text-[10px] text-slate-500 uppercase font-bold">Annual Sports Audit</span>

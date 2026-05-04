@@ -138,7 +138,7 @@ export default function Page() {
               title: "Faith Celebrations",
               icon: Sparkles,
               desc: "Holy mass, feast celebrations, cultural programs, and competitions.",
-              image: "/newgirlimages/image-98.jpeg",
+              image: "/newgirlimages/image-38.jpeg",
             },
             {
               title: "Well-being & Guidance",
