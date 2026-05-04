@@ -1,165 +1,160 @@
 import React from 'react';
-import { CreditCard, FileText, Landmark, ShieldCheck, Receipt, Users, HelpCircle } from 'lucide-react';
+import { 
+  CreditCard, FileText, Landmark, ShieldCheck, 
+  Receipt, Users, HelpCircle, BarChart3, 
+  ArrowUpRight, ArrowDownRight, Scale, AlertTriangle 
+} from 'lucide-react';
 import PageHeader from '@/app/components/PageHeader';
 import { pageImages } from '@/data/image';
 
 const FinancePage = () => {
-  const accounts = [
+  const financialPillars = [
     {
-      title: "Online Fee Portal",
-      icon: <CreditCard className="w-6 h-6 text-blue-600" />,
-      desc: "Secure payment gateway for tuition and hostel fees via Net Banking, UPI, or Cards."
+      title: "Sustainability & Growth",
+      icon: <BarChart3 className="w-6 h-6 text-indigo-600" />,
+      desc: "Long-term financial planning focused on corpus fund growth and institutional self-reliance."
     },
     {
-      title: "Scholarship Cell",
-      icon: <Users className="w-6 h-6 text-green-600" />,
-      desc: "Financial aid management, including funds generated from the 'Honesty Shop' initiatives."
+      title: "Financial Controls",
+      icon: <Scale className="w-6 h-6 text-blue-600" />,
+      desc: "Rigid internal and external audit mechanisms ensuring every rupee is accounted for."
     },
     {
-      title: "E-Governance",
-      icon: <FileText className="w-6 h-6 text-purple-600" />,
-      desc: "Digital documentation and automated receipt generation for all administrative transactions."
+      title: "Risk Management",
+      icon: <AlertTriangle className="w-6 h-6 text-amber-600" />,
+      desc: "Strategic reserve maintenance and insurance protocols to mitigate fiscal uncertainties."
     }
   ];
 
   return (
     <div className="bg-slate-50 min-h-screen">
-      {/* Hero Header */}
-      {/* <div className="bg-gradient-to-r from-slate-800 to-slate-900 py-20 px-6 text-white text-center">
-        <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl font-bold mb-4 tracking-tight">Finance & Administration</h1>
-          <p className="text-slate-400 text-lg">
-            Ensuring fiscal transparency and efficient administrative support through secure 
-            E-Governance and ethical financial practices.
-          </p>
-        </div>
-      </div> */}
-
       <PageHeader
-  title="Finance & Administration"
-  subtitle="Ensuring fiscal transparency and efficient administrative support through secure E-Governance and ethical financial practices in line with IQAC audit standards."
-  breadcrumb="Home / Administration / Finance"
-  // Using an image that reflects professional office management and secure digital systems
-  // image="/newgirlimages/image-1.jpeg
-  // 
-  // image="/banner/banner4.jpeg" 
-  
-                  image={pageImages.adminSecretary}
-/>
+        title="Finance & Administration"
+        subtitle="Ensuring fiscal transparency, resource optimization, and ethical financial governance in line with statutory audit standards."
+        breadcrumb="Home / Administration / Finance"
+        image={pageImages.adminSecretary}
+      />
 
-      <main className="max-w-6xl mx-auto -mt-10 px-6 pb-20">
-        {/* Quick Access Cards */}
+      <main className="max-w-7xl mx-auto -mt-12 px-6 pb-20 relative z-10">
+        
+        {/* Core Financial Pillars */}
         <div className="grid md:grid-cols-3 gap-6 mb-16">
-          {accounts.map((item, idx) => (
-            <div key={idx} className="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover:border-blue-300 transition-colors group">
-              <div className="bg-slate-50 w-12 h-12 rounded-lg flex items-center justify-center mb-6 group-hover:bg-blue-50">
+          {financialPillars.map((item, idx) => (
+            <div key={idx} className="bg-white p-8 rounded-2xl shadow-xl shadow-slate-200/50 border border-white hover:border-indigo-300 transition-all group">
+              <div className="bg-slate-50 w-14 h-14 rounded-xl flex items-center justify-center mb-6 group-hover:bg-indigo-50 transition-colors">
                 {item.icon}
               </div>
-              <h3 className="font-bold text-slate-800 text-xl mb-2">{item.title}</h3>
+              <h3 className="font-bold text-slate-800 text-xl mb-3">{item.title}</h3>
               <p className="text-slate-500 text-sm leading-relaxed">{item.desc}</p>
             </div>
           ))}
         </div>
 
         <div className="grid lg:grid-cols-3 gap-12">
-          {/* Main Content: Fee Structure & Transparency */}
-          <div className="lg:col-span-2 space-y-8">
+          {/* Main Financial Report Section */}
+          <div className="lg:col-span-2 space-y-12">
+            
+            {/* Income & Expenditure Categories */}
             <section className="bg-white p-8 rounded-3xl shadow-sm border border-slate-100">
-              <div className="flex items-center mb-6">
-                <Landmark className="text-blue-900 mr-3" />
-                <h2 className="text-2xl font-bold text-slate-800">Financial Transparency</h2>
-              </div>
-              <p className="text-slate-600 mb-6 leading-relaxed">
-                As per IQAC guidelines, Jayarani College maintains a strict audit trail for all 
-                financial transactions. Our administrative office is equipped with a modern 
-                infrastructure to assist students with billing, refunds, and financial counseling.
-              </p>
-              
-              <div className="overflow-hidden rounded-xl border border-slate-100">
-                <table className="w-full text-left text-sm">
-                  <thead className="bg-slate-50 text-slate-600 font-medium">
-                    <tr>
-                      <th className="px-6 py-4">Service</th>
-                      <th className="px-6 py-4">Processing Time</th>
-                      <th className="px-6 py-4">Mode</th>
-                    </tr>
-                  </thead>
-                  <tbody className="divide-y divide-slate-100">
-                    <tr>
-                      <td className="px-6 py-4 font-medium">Fee Receipts</td>
-                      <td className="px-6 py-4">Instant</td>
-                      <td className="px-6 py-4">Email/Portal</td>
-                    </tr>
-                    <tr>
-                      <td className="px-6 py-4 font-medium">Scholarship Approval</td>
-                      <td className="px-6 py-4">5-7 Working Days</td>
-                      <td className="px-6 py-4">Direct Transfer</td>
-                    </tr>
-                    <tr>
-                      <td className="px-6 py-4 font-medium">Caution Deposit Refund</td>
-                      <td className="px-6 py-4">15 Working Days</td>
-                      <td className="px-6 py-4">Bank Transfer</td>
-                    </tr>
-                  </tbody>
-                </table>
+              <h2 className="text-2xl font-bold text-slate-800 mb-8 flex items-center">
+                <Landmark className="text-indigo-900 mr-3" />
+                Resource Mobilization & Utilization
+              </h2>
+
+              <div className="grid md:grid-cols-2 gap-8">
+                {/* Income Section */}
+                <div className="space-y-6">
+                  <div className="flex items-center gap-2 text-green-600 font-bold uppercase text-xs tracking-widest">
+                    <ArrowUpRight size={16} /> Income Streams
+                  </div>
+                  <div className="space-y-4">
+                    <div className="p-4 bg-green-50 rounded-xl border border-green-100">
+                      <h4 className="font-bold text-slate-800 text-sm">Capital Income</h4>
+                      <p className="text-xs text-slate-500 mt-1">Grants for infrastructure, endowments, and government project funding.</p>
+                    </div>
+                    <div className="p-4 bg-green-50 rounded-xl border border-green-100">
+                      <h4 className="font-bold text-slate-800 text-sm">Revenue Income</h4>
+                      <p className="text-xs text-slate-500 mt-1">Tuition fees, consultancy services, and interest on institutional deposits.</p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Expenditure Section */}
+                <div className="space-y-6">
+                  <div className="flex items-center gap-2 text-rose-600 font-bold uppercase text-xs tracking-widest">
+                    <ArrowDownRight size={16} /> Expenditure Allocation
+                  </div>
+                  <div className="space-y-4">
+                    <div className="p-4 bg-rose-50 rounded-xl border border-rose-100">
+                      <h4 className="font-bold text-slate-800 text-sm">Capital Expenditure</h4>
+                      <p className="text-xs text-slate-500 mt-1">Laboratory upgrades, building expansion, and ICT equipment procurement.</p>
+                    </div>
+                    <div className="p-4 bg-rose-50 rounded-xl border border-rose-100">
+                      <h4 className="font-bold text-slate-800 text-sm">Revenue Expenditure</h4>
+                      <p className="text-xs text-slate-500 mt-1">Staff salaries, maintenance, research seed money, and student welfare.</p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </section>
 
-            {/* Security Notice */}
-            <div className="bg-blue-900 rounded-3xl p-8 text-white flex items-start space-x-6">
-              <div className="bg-blue-800 p-4 rounded-2xl">
-                <ShieldCheck className="w-8 h-8 text-blue-300" />
-              </div>
-              <div>
-                <h4 className="text-xl font-bold mb-2">Secure Transactions</h4>
-                <p className="text-blue-200 text-sm">
-                  All digital payments are protected by end-to-end encryption. The college 
-                  does not store your credit card or CVV details. Always verify the 
-                  URL is <strong>https://</strong> before making a payment.
+            {/* Financial Controls Notice */}
+            <div className="bg-indigo-900 rounded-3xl p-10 text-white relative overflow-hidden">
+              <div className="relative z-10">
+                <div className="flex items-center gap-4 mb-6">
+                  <ShieldCheck className="w-10 h-10 text-indigo-300" />
+                  <h3 className="text-2xl font-bold">Financial Controls & Audit</h3>
+                </div>
+                <p className="text-indigo-100 leading-relaxed mb-6">
+                  Jayarani College adheres to a multi-tier audit system. <strong>Internal Audits</strong> are conducted quarterly, while <strong>Statutory External Audits</strong> are completed annually to ensure 100% compliance with educational and tax regulations.
                 </p>
+                <div className="flex flex-wrap gap-4">
+                  <span className="bg-white/10 px-4 py-2 rounded-full text-xs border border-white/20">Digital Ledger Management</span>
+                  <span className="bg-white/10 px-4 py-2 rounded-full text-xs border border-white/20">Budgetary Control Systems</span>
+                  <span className="bg-white/10 px-4 py-2 rounded-full text-xs border border-white/20">Voucher Verification</span>
+                </div>
               </div>
+              <BarChart3 className="absolute -right-10 -bottom-10 w-64 h-64 text-white/5" />
             </div>
           </div>
 
-          {/* Sidebar: Office Contacts */}
+          {/* Sidebar: Office & E-Governance */}
           <div className="space-y-6">
             <div className="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm">
-              <h3 className="font-bold text-slate-800 mb-4 flex items-center">
-                <Receipt className="w-5 h-5 mr-2 text-slate-400" />
-                Office Hours
+              <h3 className="font-bold text-slate-800 mb-6 flex items-center">
+                <CreditCard className="w-5 h-5 mr-2 text-indigo-600" />
+                E-Governance Portal
               </h3>
-              <ul className="text-sm space-y-3 text-slate-600">
-                <li className="flex justify-between">
-                  <span>Mon - Fri:</span>
-                  <span className="font-semibold">9:00 AM - 4:30 PM</span>
-                </li>
-                <li className="flex justify-between">
-                  <span>Saturday:</span>
-                  <span className="font-semibold">9:00 AM - 1:00 PM</span>
-                </li>
-                <li className="text-red-500 italic mt-4 text-xs">
-                  * Office remains closed on Sundays & Public Holidays.
-                </li>
-              </ul>
+              <div className="space-y-4">
+                <button className="w-full text-left p-4 bg-slate-50 hover:bg-indigo-50 rounded-xl transition-colors group">
+                  <span className="block font-bold text-sm text-slate-700">Online Fee Payment</span>
+                  <span className="text-xs text-slate-400">Secure UPI/Net-Banking Gateway</span>
+                </button>
+                <button className="w-full text-left p-4 bg-slate-50 hover:bg-indigo-50 rounded-xl transition-colors group">
+                  <span className="block font-bold text-sm text-slate-700">Download Receipts</span>
+                  <span className="text-xs text-slate-400">Automated Tax-Compliant Receipts</span>
+                </button>
+              </div>
             </div>
 
-            <div className="bg-amber-50 p-6 rounded-2xl border border-amber-100">
-              <h3 className="font-bold text-amber-900 mb-2 flex items-center">
-                <HelpCircle className="w-5 h-5 mr-2" />
-                Need Assistance?
+            <div className="bg-amber-50 p-8 rounded-2xl border border-amber-100 relative overflow-hidden">
+              <h3 className="font-bold text-amber-900 mb-3 flex items-center relative z-10">
+                <Users className="w-5 h-5 mr-2" />
+                Welfare & Scholarships
               </h3>
-              <p className="text-amber-800 text-xs mb-4">
-                For queries regarding bank loans or special fee concessions for needy students.
+              <p className="text-amber-800 text-xs mb-6 leading-relaxed relative z-10">
+                Managed by the Finance Cell, we provide interest-free fee concessions and support for government scholarship applications to ensure inclusive growth.
               </p>
-              <button className="w-full bg-amber-600 text-white py-2 rounded-lg font-bold hover:bg-amber-700 transition-colors text-sm">
-                Contact Accountant
+              <button className="w-full bg-amber-600 text-white py-3 rounded-xl font-bold hover:bg-amber-700 transition-colors text-sm relative z-10">
+                Financial Aid Inquiry
               </button>
+              <HelpCircle className="absolute -right-4 -bottom-4 w-24 h-24 text-amber-600/10" />
             </div>
           </div>
         </div>
       </main>
 
-      <footer className="text-center py-10 text-slate-400 text-xs uppercase tracking-widest">
+      <footer className="text-center py-10 text-slate-400 text-xs uppercase tracking-widest border-t border-slate-200 bg-white">
         Official Finance Portal | Jayarani College © 2026
       </footer>
     </div>

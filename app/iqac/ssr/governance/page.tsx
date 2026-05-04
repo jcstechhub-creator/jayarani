@@ -3,57 +3,82 @@ import {
   Gavel, 
   Users, 
   ShieldCheck, 
-  Settings, 
   BarChart4, 
   Globe, 
   ChevronRight,
-  Database
+  Database,
+  HeartHandshake,
+  Scale,
+  Compass,
+  ArrowUpRight
 } from 'lucide-react';
 import PageHeader from '@/app/components/PageHeader';
 import { pageImages } from '@/data/image';
 
 const GovernancePage = () => {
   const councils = [
-    { title: "Governing Body", role: "Strategic decision-making and policy approval." },
-    { title: "Academic Council", role: "Maintenance of standards in instruction, education, and exams." },
-    { title: "IQAC Committee", role: "Catalytic improvement and quality sustenance management." },
-    { title: "Women’s Safety Committee", role: "Empowering and ensuring security for female stakeholders." }
+    { title: "Governing Body", role: "Strategic decision-making, financial oversight, and policy approval." },
+    { title: "Academic Council", role: "Maintenance of standards in instruction, education, and examination protocols." },
+    { title: "IQAC Committee", role: "Quality assurance system management and catalytic institutional improvement." },
+    { title: "Planning & Development", role: "Drafting and monitoring the Institutional Development Plan (IDP)." }
   ];
 
   const audits = ["Academic & Administrative", "Gender Audit", "Energy Audit", "Green Audit", "Environment Audit"];
 
+  const welfareSchemes = [
+    { type: "Student Welfare", items: ["Scholarships & Freeships", "Health Insurance", "Counseling Services", "Skill Enhancement"] },
+    { type: "Employee Welfare", items: ["Provident Fund (EPF)", "Maternity Leave", "FDP Sponsorships", "Gratuity & Allowances"] }
+  ];
+
   return (
     <div className="bg-neutral-50 min-h-screen text-slate-800">
-      {/* Header */}
       <PageHeader
-  title="Administrative Framework"
-  subtitle="Advocating innovation and inclusion through a decentralized governance model, ensuring transparent leadership and systemic excellence across all institutional levels."
-  breadcrumb="Home / Administration / Governance"
-  // Using an image that reflects professional leadership, organizational structure, and strategic planning
-  // image="/newgirlimages/image-64.jpeg" 
-  // image="/banner/banner4.jpeg"
-  
-                  image={pageImages.adminSecretary}
-/>
-      {/* <div className="bg-blue-950 py-20 px-6 border-b-4 border-amber-500">
-        <div className="max-w-6xl mx-auto">
-          <div className="flex items-center space-x-3 mb-4">
-            <Gavel className="text-amber-500 w-8 h-8" />
-            <span className="text-amber-500 font-bold uppercase tracking-widest">Administrative Framework</span>
-          </div>
-          <h1 className="text-4xl md:text-5xl font-extrabold text-white mb-6">College Governance</h1>
-          <p className="text-blue-100 text-lg max-w-3xl leading-relaxed">
-            Jayarani College operates on a decentralized governance model, ensuring that innovation 
-            and inclusion are advocated at every level of our institutional hierarchy.
-          </p>
-        </div>
-      </div> */}
+        title="Administrative Framework"
+        subtitle="Advocating innovation through decentralized leadership, strategic planning, and a robust quality assurance system."
+        breadcrumb="Home / Administration / Governance"
+        image={pageImages.adminSecretary}
+      />
 
-      <main className="max-w-6xl mx-auto py-16 px-6">
-        {/* Hierarchy Section */}
-        <div className="grid lg:grid-cols-3 gap-12">
+      <main className="max-w-7xl mx-auto py-16 px-6">
+        
+        {/* TOP SECTION: LEADERSHIP & IDP */}
+        <div className="grid lg:grid-cols-3 gap-8 mb-20">
+          <div className="lg:col-span-2 bg-white p-10 rounded-[2.5rem] shadow-sm border border-neutral-100 relative overflow-hidden">
+            <div className="relative z-10">
+              <div className="flex items-center gap-3 text-blue-900 mb-6">
+                <Compass className="w-8 h-8" />
+                <h2 className="text-3xl font-bold">Institutional Development Plan (IDP)</h2>
+              </div>
+              <p className="text-slate-600 leading-relaxed mb-8 text-lg">
+                Our <strong>Effective Leadership</strong> is guided by a long-term IDP that focuses on 
+                sustainable growth, infrastructure modernization, and academic excellence. This 
+                decentralized model ensures that every department contributes to the institutional vision.
+              </p>
+              <div className="flex flex-wrap gap-4">
+                {["Strategic Vision", "Participative Management", "Resource Optimization"].map(item => (
+                  <span key={item} className="bg-blue-50 text-blue-700 px-4 py-2 rounded-full text-xs font-bold border border-blue-100 flex items-center">
+                    <ArrowUpRight className="w-3 h-3 mr-2" /> {item}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
           
-          {/* Left: Statutory Bodies */}
+          <div className="bg-gradient-to-br from-blue-900 to-indigo-950 p-10 rounded-[2.5rem] text-white flex flex-col justify-center">
+            <Scale className="w-12 h-12 text-amber-500 mb-6" />
+            <h3 className="text-2xl font-bold mb-4">Grievance Redressal</h3>
+            <p className="text-blue-100 text-sm leading-relaxed mb-6">
+              A transparent, time-bound mechanism for handling student and staff grievances via 
+              the Internal Complaint Committee and Online Grievance Portal.
+            </p>
+            <button className="bg-amber-500 text-blue-950 font-bold py-3 rounded-xl text-sm hover:bg-amber-400 transition-colors">
+              Access Grievance Portal
+            </button>
+          </div>
+        </div>
+
+        {/* MIDDLE SECTION: COUNCILS & WELFARE */}
+        <div className="grid lg:grid-cols-3 gap-12">
           <div className="lg:col-span-2">
             <h2 className="text-2xl font-bold mb-8 flex items-center">
               <Users className="mr-3 text-blue-900" />
@@ -61,77 +86,80 @@ const GovernancePage = () => {
             </h2>
             <div className="grid sm:grid-cols-2 gap-4">
               {councils.map((item, index) => (
-                <div key={index} className="bg-white p-6 rounded-xl shadow-sm border border-neutral-200 hover:shadow-md transition-shadow">
+                <div key={index} className="bg-white p-6 rounded-2xl shadow-sm border border-neutral-200 hover:shadow-md transition-shadow">
                   <h3 className="font-bold text-blue-900 mb-2">{item.title}</h3>
                   <p className="text-sm text-slate-500 leading-snug">{item.role}</p>
                 </div>
               ))}
             </div>
 
-            {/* E-Governance Section */}
-            <section className="mt-12 bg-white p-8 rounded-2xl border border-neutral-200 shadow-sm">
-              <div className="flex items-center mb-6">
-                <Database className="text-blue-600 mr-3" />
-                <h2 className="text-2xl font-bold">E-Governance Initiative</h2>
-              </div>
-              <p className="text-slate-600 mb-6">
-                To promote transparency and accountability, the institution has implemented E-Governance 
-                across all key administrative domains as part of the IQAC quality initiatives.
-              </p>
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
-                {['Administration', 'Finance', 'Student Support', 'Examinations'].map((tag) => (
-                  <div key={tag} className="py-3 px-2 bg-blue-50 text-blue-800 rounded-lg font-bold text-xs uppercase tracking-tight">
-                    {tag}
+            {/* WELFARE SCHEMES */}
+            <div className="mt-12 grid sm:grid-cols-2 gap-8">
+              {welfareSchemes.map((scheme, i) => (
+                <div key={i} className="bg-white p-8 rounded-3xl border border-neutral-100 shadow-sm">
+                  <div className="flex items-center gap-3 mb-6">
+                    <HeartHandshake className="text-rose-500 w-6 h-6" />
+                    <h3 className="font-bold text-slate-800">{scheme.type}</h3>
                   </div>
-                ))}
-              </div>
-            </section>
+                  <ul className="space-y-3">
+                    {scheme.items.map(item => (
+                      <li key={item} className="flex items-center text-sm text-slate-500">
+                        <div className="w-1.5 h-1.5 bg-rose-400 rounded-full mr-3" /> {item}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
           </div>
 
-          {/* Right: Accountability & Audits */}
+          {/* RIGHT SIDEBAR: AUDITS & E-GOV */}
           <div className="space-y-8">
-            <div className="bg-blue-900 rounded-2xl p-8 text-white">
-              <h3 className="text-xl font-bold mb-6 flex items-center">
-                <BarChart4 className="mr-3 text-amber-500" />
-                Quality Audits
+            <div className="bg-white rounded-3xl p-8 border border-neutral-200 shadow-sm">
+              <h3 className="text-xl font-bold mb-6 flex items-center text-blue-900">
+                <BarChart4 className="mr-3 text-blue-600" />
+                Quality Assurance
               </h3>
               <ul className="space-y-4">
                 {audits.map((audit) => (
                   <li key={audit} className="flex items-center text-sm group cursor-default">
-                    <ChevronRight className="w-4 h-4 mr-2 text-amber-500 group-hover:translate-x-1 transition-transform" />
-                    <span className="text-blue-100">{audit}</span>
+                    <ChevronRight className="w-4 h-4 mr-2 text-blue-600 group-hover:translate-x-1 transition-transform" />
+                    <span className="text-slate-600 font-medium">{audit}</span>
                   </li>
                 ))}
               </ul>
-              <div className="mt-8 pt-6 border-t border-blue-800">
-                <div className="flex items-center text-xs text-blue-300 uppercase tracking-widest font-bold">
-                  <Globe className="w-4 h-4 mr-2" />
-                  Global Strategy Alignment
-                </div>
+            </div>
+
+            <div className="bg-amber-900 rounded-[2rem] p-8 text-white relative overflow-hidden">
+              <Database className="w-10 h-10 text-amber-500 mb-4" />
+              <h3 className="text-xl font-bold mb-3">E-Governance</h3>
+              <p className="text-amber-100 text-xs leading-relaxed mb-6">
+                Systemic automation in Finance, Administration, and Examination to ensure error-free quality management.
+              </p>
+              <div className="grid grid-cols-2 gap-2">
+                {['ERP Portal', 'Digital Finance', 'HRMS', 'Online Exam'].map(item => (
+                  <span key={item} className="bg-white/10 text-[10px] p-2 text-center rounded uppercase font-bold">{item}</span>
+                ))}
               </div>
             </div>
 
-            <div className="bg-amber-50 rounded-2xl p-8 border border-amber-200">
-              <h3 className="font-bold text-amber-900 mb-4 flex items-center">
-                <ShieldCheck className="mr-2 text-amber-600" />
-                Code of Conduct
+            <div className="bg-neutral-800 rounded-[2rem] p-8 text-white">
+              <h3 className="font-bold mb-4 flex items-center gap-2">
+                <ShieldCheck className="text-green-500" /> Ethics & Conduct
               </h3>
-              <p className="text-xs text-amber-800 leading-relaxed mb-4">
-                All stakeholders are expected to adhere to the institution's ethical guidelines, 
-                mirroring the integrity promoted by the "Honesty Shop" model of character development.
+              <p className="text-xs text-neutral-400 leading-relaxed">
+                Institutional integrity is maintained through a strict Code of Conduct and the 
+                "Honesty Shop" pedagogical model for stakeholders.
               </p>
-              <button className="text-amber-700 font-bold text-xs uppercase underline hover:text-amber-900">
-                Download PDF Policy
-              </button>
             </div>
           </div>
         </div>
 
-        {/* Accountability Statement */}
+        {/* BOTTOM STATEMENT */}
         <div className="mt-16 text-center border-t border-neutral-200 pt-12">
           <p className="text-slate-400 italic text-sm max-w-2xl mx-auto">
-            "We strive for excellence through collaboration with higher education stakeholders for 
-            quality evaluation, promotion, and sustenance."
+            "Governance is not just about leadership; it is about building a Quality Assurance System that 
+            empowers every individual through decentralized excellence."
           </p>
         </div>
       </main>

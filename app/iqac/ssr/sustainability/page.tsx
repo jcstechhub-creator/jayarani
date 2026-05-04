@@ -1,122 +1,153 @@
+"use client";
+
 import React from 'react';
-import { Leaf, Droplets, Wind, Recycle, Users, BarChart3 } from 'lucide-react';
+import { 
+  Leaf, 
+  Droplets, 
+  Wind, 
+  Recycle, 
+  Users, 
+  BarChart3, 
+  Globe, 
+  ShieldCheck,
+  Zap
+} from 'lucide-react';
 import PageHeader from '@/app/components/PageHeader';
 import { pageImages } from '@/data/image';
 
 const SustainabilityOutcomes = () => {
   const metrics = [
     {
+      id: "10.1",
+      title: "Community Eco-Activities",
+      desc: "Extension activities including UBA village adoption for clean energy and environmental literacy.",
+      icon: <Users className="text-emerald-600" />
+    },
+    {
       id: "10.2",
       title: "Waste & Water Management",
-      desc: "Comprehensive water budgeting and recycling systems for a zero-waste campus.",
+      desc: "Implementation of 3R principles, E-waste disposal, and comprehensive water budgeting/harvesting.",
       icon: <Droplets className="text-blue-600" />
     },
     {
       id: "10.3",
-      title: "Net Zero Progress",
-      desc: "Strategic transition towards carbon neutrality and Net Zero energy consumption.",
-      icon: <Wind className="text-cyan-600" />
+      title: "Progressing towards Net Zero",
+      desc: "Strategic adoption of solar energy, LED lighting, and carbon footprint reduction targets.",
+      icon: <Zap className="text-amber-500" />
     },
     {
       id: "10.4",
-      title: "Green Audits",
-      desc: "Periodic assessments of energy, environment, and ecological impact.",
+      title: "Green Audits & Initiatives",
+      desc: "Annual Energy, Environment, and Green Audits with actionable compliance reports.",
       icon: <BarChart3 className="text-green-600" />
     },
     {
       id: "10.5",
-      title: "Eco-Collaborations",
-      desc: "Partnerships with NGOs and Industry for environmental sustainability projects.",
-      icon: <Recycle className="text-emerald-600" />
+      title: "Industry & NGO Collaborations",
+      desc: "MoUs with environmental agencies for technical waste recycling and conservation projects.",
+      icon: <Globe className="text-cyan-600" />
     }
   ];
 
   return (
+    <div className="bg-white min-h-screen">
+      <PageHeader
+        title="Sustainability Outcomes"
+        subtitle="Advancing institutional environmental stewardship through Net Zero transition, scientific water budgeting, and community-led conservation."
+        breadcrumb="Home / Quality / Sustainability"
+        image={pageImages.adminSecretary}
+      />
 
-    <>
-    <PageHeader
-  title="Sustainability Outcomes"
-  subtitle="Pioneering the path to Net Zero through advanced water budgeting, green audits, and community-based eco-initiatives aligned with March 2024 NAAC Attribute 10."
-  breadcrumb="Home / Quality / Sustainability"
-  // Using an image that highlights a green campus with solar integration or rainwater harvesting systems
-  // image="/newgirlimages/image-55.jpeg" 
-  // image="/banner/banner4.jpeg"
-  
-                  image={pageImages.adminSecretary}
-/>
-    
-    <div className="bg-emerald-50/30 min-h-screen p-8 font-sans">
-      {/* Header Section */}
-      <div className="max-w-6xl mx-auto mb-16 text-center">
-        <div className="inline-block px-3 py-1 bg-emerald-100 text-emerald-700 rounded-full text-[10px] font-bold uppercase tracking-widest mb-4">
-          Outcome Attribute 10 | Sustainability
-        </div>
-        <h1 className="text-4xl font-black text-slate-900 mb-4 tracking-tight">Environmental Sustainability</h1>
-        <p className="text-slate-500 max-w-2xl mx-auto italic">
-          "Meeting the present needs without compromising the ability of future generations 
-          to meet theirs through active green initiatives."
-        </p>
-      </div>
-
-      {/* Metrics Grid */}
-      <div className="max-w-6xl mx-auto grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-        {metrics.map((item) => (
-          <div key={item.id} className="bg-white p-6 rounded-3xl border border-emerald-100 shadow-sm hover:shadow-lg transition-all">
-            <div className="flex justify-between items-start mb-6">
-              <div className="p-3 bg-emerald-50 rounded-2xl">{item.icon}</div>
-              <span className="text-[10px] font-mono font-bold text-emerald-300">METRIC {item.id}</span>
-            </div>
-            <h3 className="font-bold text-slate-800 mb-2">{item.title}</h3>
-            <p className="text-xs text-slate-500 leading-relaxed">{item.desc}</p>
+      <main className="max-w-7xl mx-auto py-16 px-6">
+        {/* Metric Compliance Header */}
+        <div className="text-center mb-20">
+          <div className="inline-block px-4 py-1.5 bg-emerald-100 text-emerald-800 rounded-full text-[11px] font-bold uppercase tracking-[0.15em] mb-4">
+            Outcome Attribute 10 | NAAC Compliance 2026
           </div>
-        ))}
-      </div>
+          <h2 className="text-4xl font-bold text-slate-900 tracking-tight">Environmental Stewardship</h2>
+          <div className="h-1.5 w-24 bg-emerald-500 mx-auto mt-4 rounded-full"></div>
+        </div>
 
-      {/* Community Impact Section */}
-      <div className="max-w-6xl mx-auto mt-12 bg-white rounded-[3rem] p-10 lg:p-16 shadow-sm border border-emerald-50 overflow-hidden relative">
-        <div className="relative z-10 grid lg:grid-cols-2 gap-12 items-center">
-          <div>
-            <div className="flex items-center mb-6 text-emerald-700">
-              <Users className="mr-3 w-6 h-6" />
-              <h2 className="text-2xl font-bold">Community Sustainability (10.1)</h2>
-            </div>
-            <p className="text-slate-600 leading-relaxed mb-8">
-              Under the Unnat Bharat Abhiyan (UBA), Jayarani College extends its sustainability 
-              practices to adopted villages, focusing on clean energy and disease-free environments.
-            </p>
-            <div className="space-y-4">
-              <div className="flex items-center text-sm font-semibold text-slate-700">
-                <div className="w-2 h-2 bg-emerald-500 rounded-full mr-3"></div>
-                Carbon Sequestration Monitoring
+        {/* 5 Pillar Grid */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {metrics.map((item) => (
+            <div key={item.id} className="bg-emerald-50/30 p-8 rounded-[2.5rem] border border-emerald-100 hover:bg-white hover:shadow-xl hover:shadow-emerald-900/5 transition-all duration-500 group">
+              <div className="flex justify-between items-start mb-6">
+                <div className="p-4 bg-white rounded-2xl shadow-sm group-hover:scale-110 transition-transform">
+                  {item.icon}
+                </div>
+                <span className="text-[10px] font-mono font-bold text-emerald-400 bg-white px-2 py-1 rounded-md border border-emerald-50">
+                  METRIC {item.id}
+                </span>
               </div>
-              <div className="flex items-center text-sm font-semibold text-slate-700">
-                <div className="w-2 h-2 bg-emerald-500 rounded-full mr-3"></div>
-                Paper Waste Recycling Programs
+              <h3 className="font-bold text-slate-800 text-xl mb-3">{item.title}</h3>
+              <p className="text-sm text-slate-500 leading-relaxed">{item.desc}</p>
+            </div>
+          ))}
+        </div>
+
+        {/* Detailed Strategic Block */}
+        <section className="mt-20 grid lg:grid-cols-2 gap-12 items-stretch">
+          <div className="bg-slate-900 rounded-[3rem] p-10 lg:p-14 text-white relative overflow-hidden">
+            <div className="relative z-10">
+              <div className="flex items-center gap-3 text-emerald-400 mb-6">
+                <Wind className="w-8 h-8" />
+                <h3 className="text-3xl font-bold tracking-tight">Net Zero Roadmap</h3>
+              </div>
+              <p className="text-slate-300 leading-relaxed mb-8">
+                In alignment with <strong>Metric 10.3</strong>, the institution has initiated a decarbonization 
+                strategy. This includes migrating to 100% renewable energy sources and enhancing 
+                <strong> Carbon Sequestration</strong> through campus-wide biodiversity preservation.
+              </p>
+              <div className="grid grid-cols-2 gap-4">
+                <div className="p-4 bg-white/5 border border-white/10 rounded-2xl">
+                  <span className="block text-2xl font-bold text-emerald-400">85%</span>
+                  <span className="text-[10px] uppercase font-bold text-slate-400 tracking-wider">Renewable Energy</span>
+                </div>
+                <div className="p-4 bg-white/5 border border-white/10 rounded-2xl">
+                  <span className="block text-2xl font-bold text-emerald-400">Zero</span>
+                  <span className="text-[10px] uppercase font-bold text-slate-400 tracking-wider">Single-use Plastic</span>
+                </div>
               </div>
             </div>
+            <Leaf className="absolute -right-16 -bottom-16 w-64 h-64 text-white/5 rotate-12" />
           </div>
-          <div className="bg-emerald-900 rounded-[2.5rem] p-8 text-white relative">
-            <Leaf className="absolute top-4 right-4 text-emerald-700 w-12 h-12" />
-            <h4 className="text-xl font-bold mb-4">Green Vision 2026</h4>
-            <p className="text-emerald-200 text-sm mb-6 leading-relaxed">
-              Aligning with the new NAAC "Good" metric category by optimizing 
-              air quality and water budgeting.
-            </p>
-            <div className="h-2 bg-emerald-800 rounded-full overflow-hidden">
-              <div className="bg-emerald-400 h-full w-[85%]"></div>
-            </div>
-            <span className="text-[10px] uppercase mt-2 block text-emerald-400 font-bold">Progress toward Net Zero</span>
-          </div>
-        </div>
-      </div>
 
-      <footer className="mt-20 text-center border-t border-emerald-100 pt-8">
-        <p className="text-slate-400 text-[10px] tracking-[0.2em] uppercase font-medium">
-          Binary Framework Compliance | SSR Sustainability Outcomes 2026
+          <div className="flex flex-col justify-between gap-8">
+            <div className="bg-white p-10 rounded-[3rem] border border-slate-100 shadow-sm flex-1">
+              <div className="flex items-center gap-4 mb-6">
+                <ShieldCheck className="text-blue-600 w-8 h-8" />
+                <h3 className="text-xl font-bold text-slate-800">Water Budgeting & Management</h3>
+              </div>
+              <p className="text-sm text-slate-500 leading-relaxed mb-6">
+                <strong>Metric 10.2:</strong> Our water management protocols involve scientific 
+                groundwater recharging and automated sensors to prevent wastage, ensuring 
+                institutional resilience against local water scarcity.
+              </p>
+              <div className="flex gap-3">
+                <span className="px-3 py-1 bg-blue-50 text-blue-700 text-[10px] font-bold rounded-lg border border-blue-100 uppercase">Recycling</span>
+                <span className="px-3 py-1 bg-blue-50 text-blue-700 text-[10px] font-bold rounded-lg border border-blue-100 uppercase">Sensors</span>
+                <span className="px-3 py-1 bg-blue-50 text-blue-700 text-[10px] font-bold rounded-lg border border-blue-100 uppercase">Rainwater</span>
+              </div>
+            </div>
+
+            <div className="bg-emerald-900 p-10 rounded-[3rem] text-white flex-1">
+              <h4 className="font-bold text-emerald-400 mb-2 uppercase text-xs tracking-widest">Industry & NGO Collab (10.5)</h4>
+              <p className="text-sm text-emerald-100 leading-relaxed">
+                Strategic partnerships enable us to process specialized E-waste and conduct 
+                certified Environmental Audits, bridging the gap between policy and practice.
+              </p>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer className="mt-20 text-center border-t border-slate-100 py-12 bg-slate-50">
+        <p className="text-slate-400 text-[10px] tracking-[0.3em] uppercase font-bold">
+          Sustainability Metrics Compliance | Jayarani College © 2026
         </p>
       </footer>
     </div>
-    </>
   );
 };
 
