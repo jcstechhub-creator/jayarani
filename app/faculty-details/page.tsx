@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import { GraduationCap, ShieldCheck, Award, BookOpen, UserCheck, ArrowUpRight } from "lucide-react";
-import PageHeader from "../components/PageHeader";
+// import PageHeader from "../components/PageHeader";
 import { pageImages } from "@/data/image";
 // import PageHeader from "../components/PageHeader";
 
