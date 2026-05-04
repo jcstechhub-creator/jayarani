@@ -143,6 +143,7 @@ const navItems = [
       { label: "Fees & Payments", path: "/students/fee-payments" },
       { label: "Student Counselling", path: "/students/counselling" },
       { label: "Training & Placement", path: "/students/placement" },
+      { label: "Baby Care Center", path: "/students/baby-care-centre" },
       { label: "Grievance Redressal Cell", path: "/students/grievance" },
       { label: "Anti-Ragging Cell", path: "/students/anti-ragging" },
 
@@ -176,7 +177,7 @@ const navItems = [
   // },
 
   {
-    label: "Alumni",
+    label: "Alumni/ae",
     icon: AlumniIcon,
     children: [
       { label: "Registration Form", path: "/alumni/register" },
@@ -218,7 +219,7 @@ const navItems = [
       { label: "Examinations", path: "/examinations" },
       { label: "Library", path: "/library" },
       { label: "IRINS-JCS", path: "/irins" },
-    ],
+    ], 
   },
 ];
 
@@ -249,8 +250,8 @@ export default function Navbar() {
             <div className="max-w-[95%] mx-auto px-4 h-10 flex items-center justify-between text-[11px] font-bold tracking-tight overflow-visible">
               <div className="flex items-center gap-6 text-gray-500">
                 <Link href="/aishe" className="hover:text-[#2F4A8A] transition-colors">AISHE</Link>
-                <Link href="/nirf" className="hover:text-[#2F4A8A] transition-colors">NIRF</Link>
-                <Link href="/ssr" className="hover:text-[#2F4A8A] transition-colors">SSR</Link>
+                {/* <Link href="/nirf" className="hover:text-[#2F4A8A] transition-colors">NIRF</Link> */}
+                {/* <Link href="/ssr" className="hover:text-[#2F4A8A] transition-colors">SSR</Link> */}
                 <Link href="/naac" className="hover:text-[#2F4A8A] transition-colors">NAAC</Link>
 
                 {/* SSR Criteria Wise with dropdown */}
@@ -292,7 +293,7 @@ export default function Navbar() {
 
                 <Link href="/examinations" className="hover:text-[#2F4A8A] transition-colors">Examinations</Link>
                 <Link href="/library" className="hover:text-[#2F4A8A] transition-colors">Library</Link>
-                <Link href="/irins-jcs" className="hover:text-[#2F4A8A] transition-colors">IRINS-JCS</Link>
+                {/* <Link href="/irins-jcs" className="hover:text-[#2F4A8A] transition-colors">IRINS-JCS</Link> */}
               </div>
 
               <div className="flex items-center gap-4">

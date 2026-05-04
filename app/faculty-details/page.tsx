@@ -36,13 +36,12 @@ const FacultyDetailsPremium = () => {
 
   return (
     <div className="min-h-screen bg-[#FDFDFD] pb-32">
-     <PageHeader
-        title="Awards & Recognitions"
-        subtitle="Celebrating our commitment to excellence in education, academic reform, and continuous improvement."
-        breadcrumb="Home / Academics / Awards"
-        image={pageImages.genericPage}
-      />
-
+<PageHeader
+  title="Faculty Details"
+  subtitle="Meet our dedicated and experienced faculty members who are committed to delivering quality education and guiding students toward success."
+  breadcrumb="Home / Academics / Faculty"
+  image={pageImages.genericPage}
+/>
       <div className="max-w-7xl mx-auto px-6">
         
         <div className="grid md:grid-cols-4 border-y border-slate-200 mt-20 mb-20 divide-x divide-slate-200">
