@@ -49,6 +49,7 @@ export default function RootLayout({
 
         {/* Main Content */}
         <main className="flex-1">
+          
           {children}
         </main>
 
