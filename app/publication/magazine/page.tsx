@@ -2,7 +2,10 @@
 
 import React, { useState } from "react";
 import PageHeader from "@/app/components/PageHeader";
-import { Award, BookOpen, Cpu, ShieldCheck, Microscope, Quote, FileText, X } from "lucide-react";
+import { 
+  Award, BookOpen, Cpu, ShieldCheck, Microscope, 
+  Quote, FileText, X, Users as UsersIcon 
+} from "lucide-react";
 import { pageImages } from "@/data/image";
 // Import react-pdf components
 import { Document, Page, pdfjs } from 'react-pdf';
@@ -23,8 +26,13 @@ export const mag = [
   "/pdf/2025-oct.pdf",
 ];
 
-// Component to render the PDF preview
-const MagazinePreview = ({ pdfPath }) => {
+// 1. Define the Interface for Props
+interface MagazinePreviewProps {
+  pdfPath: string;
+}
+
+// 2. Apply the type to the component
+const MagazinePreview = ({ pdfPath }: MagazinePreviewProps) => {
   return (
     <div className="w-full h-full flex items-center justify-center bg-gray-50">
       <Document 
@@ -50,49 +58,52 @@ const CollegeMagazine = () => {
     hero: pageImages.adminSecretary,
   };
 
-  const openMagazine = (url) => {
+  const openMagazine = (url: string) => {
     setCurrentPdf(url);
     setOpen(true);
   };
 
-  const formatName = (path) => {
+  const formatName = (path: string) => {
     if (!path) return "";
-    const fileName = path.split('/').pop().replace('.pdf', '');
+    const fileName = path.split('/').pop()?.replace('.pdf', '') || "";
     const [year, month] = fileName.split('-');
-    const monthNames = { 
+    
+    // Mapping for month slugs to full names
+    const monthNames: Record<string, string> = { 
         aug: "August", sep: "September", oct: "October", nov: "November", 
         may: "May", june: "June", july: "July" 
     };
+    
     return `${monthNames[month] || month} ${year}`;
   };
 
   return (
     <div className="min-h-screen bg-gray-50 pb-20">
       {/* PDF MODAL VIEWER */}
-    {/* PDF MODAL VIEWER */}
-{open && (
-  <div 
-    className="fixed inset-0 bg-black/80 flex items-center justify-center z-[9999] p-4"
-    onContextMenu={(e) => e.preventDefault()} // Prevents right-click
-  >
-    <div className="w-full max-w-3xl h-[90vh] bg-white rounded-2xl overflow-hidden relative shadow-2xl">
-      {/* Close Button */}
-      <button
-        onClick={() => setOpen(false)}
-        className="absolute top-4 right-4 bg-red-600 hover:bg-red-700 text-white p-2 rounded-full z-50 transition-colors"
-      >
-        <X size={24} />
-      </button>
+      {open && (
+        <div 
+          className="fixed inset-0 bg-black/80 flex items-center justify-center z-[9999] p-4"
+          onContextMenu={(e) => e.preventDefault()} 
+        >
+          <div className="w-full max-w-3xl h-[90vh] bg-white rounded-2xl overflow-hidden relative shadow-2xl">
+            {/* Close Button */}
+            <button
+              onClick={() => setOpen(false)}
+              className="absolute top-4 right-4 bg-red-600 hover:bg-red-700 text-white p-2 rounded-full z-50 transition-colors"
+            >
+              <X size={24} />
+            </button>
 
-      {/* Iframe with toolbar disabled */}
-      <iframe
-        src={`${currentPdf}#toolbar=0`}
-        className="w-full h-full"
-        title="Magazine Viewer"
-      ></iframe>
-    </div>
-  </div>
-)}
+            {/* Iframe with toolbar disabled */}
+            <iframe
+              src={`${currentPdf}#toolbar=0`}
+              className="w-full h-full"
+              title="Magazine Viewer"
+            ></iframe>
+          </div>
+        </div>
+      )}
+
       <PageHeader
         title="JCS Magazine 2026"
         subtitle="Celebrating excellence, innovation, and a legacy of empowerment."
@@ -134,7 +145,6 @@ const CollegeMagazine = () => {
               <div key={index} onClick={() => openMagazine(pdfPath)} className="group cursor-pointer">
                 <div className="aspect-[3/4] bg-white rounded-2xl overflow-hidden border border-gray-200 relative mb-3 group-hover:border-red-400 group-hover:shadow-lg transition-all">
                   
-                  {/* REAL PDF PREVIEW RENDERING */}
                   <MagazinePreview pdfPath={pdfPath} />
 
                   {/* Spine Shadow for Depth */}
@@ -153,9 +163,6 @@ const CollegeMagazine = () => {
             ))}
           </div>
         </section>
-
-        {/* Bento Grid and Research sections remain here... */}
-        {/* (Omitted for brevity, but keep your original code for those) */}
       </div>
     </div>
   );
