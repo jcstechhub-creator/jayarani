@@ -1,18 +1,17 @@
 "use client";
 
 import React, { useState } from "react";
-import dynamic from "next/dynamic";
 import PageHeader from "@/app/components/PageHeader";
 import { BookOpen, Quote, X } from "lucide-react";
 import { pageImages } from "@/data/image";
+// Import react-pdf components and types
+import { Document, Page, pdfjs } from 'react-pdf';
 
-// DYNAMIC IMPORT: This prevents the "DOMMatrix is not defined" error
-const MagazinePreview = dynamic(() => import("@/app/components/MagazinePDF"), {
-  ssr: false,
-  loading: () => <div className="animate-pulse bg-gray-200 w-full h-full" />
-});
+// Configure the PDF worker (Required)
+pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
 
-export const mag = [
+// Define the PDF paths array with a const assertion for literal types if needed
+export const mag: string[] = [
   "/pdf/2024-aug.pdf",
   "/pdf/2024-sep.pdf",
   "/pdf/2024-oct.pdf",
@@ -25,20 +24,48 @@ export const mag = [
   "/pdf/2025-oct.pdf",
 ];
 
-const CollegeMagazine = () => {
-  const [open, setOpen] = useState(false);
-  const [currentPdf, setCurrentPdf] = useState("");
+// Interface for the Preview Component Props
+interface MagazinePreviewProps {
+  pdfPath: string;
+}
 
-  const openMagazine = (url: string) => {
+const MagazinePreview: React.FC<MagazinePreviewProps> = ({ pdfPath }) => {
+  return (
+    <div className="w-full h-full flex items-center justify-center bg-gray-50">
+      <Document 
+        file={pdfPath} 
+        loading={<div className="animate-pulse bg-gray-200 w-full h-full" />}
+      >
+        <Page 
+          pageNumber={1} 
+          width={180} 
+          renderTextLayer={false} 
+          renderAnnotationLayer={false} 
+        />
+      </Document>
+    </div>
+  );
+};
+
+const CollegeMagazine: React.FC = () => {
+  const [open, setOpen] = useState<boolean>(false);
+  const [currentPdf, setCurrentPdf] = useState<string>("");
+
+  const magazineImages = {
+    hero: pageImages.adminSecretary,
+  };
+
+  const openMagazine = (url: string): void => {
     setCurrentPdf(url);
     setOpen(true);
   };
 
-  const formatName = (path: string) => {
+  const formatName = (path: string): string => {
     if (!path) return "";
     const fileName = path.split('/').pop()?.replace('.pdf', '') || "";
     const [year, month] = fileName.split('-');
     
+    // Explicitly typing the dictionary keys
     const monthNames: Record<string, string> = { 
         aug: "August", sep: "September", oct: "October", nov: "November", 
         may: "May", june: "June", july: "July" 
@@ -53,16 +80,19 @@ const CollegeMagazine = () => {
       {open && (
         <div 
           className="fixed inset-0 bg-black/80 flex items-center justify-center z-[9999] p-4"
-          onContextMenu={(e) => e.preventDefault()} 
+          onContextMenu={(e: React.MouseEvent) => e.preventDefault()}
         >
           <div className="w-full max-w-3xl h-[90vh] bg-white rounded-2xl overflow-hidden relative shadow-2xl">
+            {/* Close Button */}
             <button
               onClick={() => setOpen(false)}
               className="absolute top-4 right-4 bg-red-600 hover:bg-red-700 text-white p-2 rounded-full z-50 transition-colors"
+              aria-label="Close modal"
             >
               <X size={24} />
             </button>
 
+            {/* Iframe with toolbar disabled */}
             <iframe
               src={`${currentPdf}#toolbar=0`}
               className="w-full h-full"
@@ -76,10 +106,11 @@ const CollegeMagazine = () => {
         title="JCS Magazine 2026"
         subtitle="Celebrating excellence, innovation, and a legacy of empowerment."
         breadcrumb="Home / Publication / Magazine"
-        image={pageImages.adminSecretary}
+        image={magazineImages.hero}
       />
 
       <div className="max-w-7xl mx-auto px-6 mt-16 space-y-24">
+        
         {/* Secretary Welcome */}
         <section className="bg-white p-10 rounded-3xl shadow-sm border border-gray-100 relative overflow-hidden">
           <div className="relative z-10 max-w-3xl">
@@ -109,14 +140,20 @@ const CollegeMagazine = () => {
 
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
             {mag.map((pdfPath, index) => (
-              <div key={index} onClick={() => openMagazine(pdfPath)} className="group cursor-pointer">
+              <div 
+                key={index} 
+                onClick={() => openMagazine(pdfPath)} 
+                className="group cursor-pointer"
+              >
                 <div className="aspect-[3/4] bg-white rounded-2xl overflow-hidden border border-gray-200 relative mb-3 group-hover:border-red-400 group-hover:shadow-lg transition-all">
                   
-                  {/* Loaded only on client */}
+                  {/* REAL PDF PREVIEW RENDERING */}
                   <MagazinePreview pdfPath={pdfPath} />
 
+                  {/* Spine Shadow for Depth */}
                   <div className="absolute inset-y-0 left-0 w-2 bg-gradient-to-r from-black/10 to-transparent pointer-events-none" />
 
+                  {/* Hover Overlay */}
                   <div className="absolute inset-0 bg-red-900/10 opacity-0 group-hover:opacity-100 transition-all flex items-center justify-center">
                     <span className="bg-white text-red-900 px-4 py-2 rounded-lg font-bold text-xs shadow-xl">Read PDF</span>
                   </div>
