@@ -1,17 +1,16 @@
 "use client";
 
 import React, { useState } from "react";
+import dynamic from "next/dynamic";
 import PageHeader from "@/app/components/PageHeader";
-import { 
-  Award, BookOpen, Cpu, ShieldCheck, Microscope, 
-  Quote, FileText, X, Users as UsersIcon 
-} from "lucide-react";
+import { BookOpen, Quote, X } from "lucide-react";
 import { pageImages } from "@/data/image";
-// Import react-pdf components
-import { Document, Page, pdfjs } from 'react-pdf';
 
-// Configure the PDF worker (Required)
-pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
+// DYNAMIC IMPORT: This prevents the "DOMMatrix is not defined" error
+const MagazinePreview = dynamic(() => import("@/app/components/MagazinePDF"), {
+  ssr: false,
+  loading: () => <div className="animate-pulse bg-gray-200 w-full h-full" />
+});
 
 export const mag = [
   "/pdf/2024-aug.pdf",
@@ -26,37 +25,9 @@ export const mag = [
   "/pdf/2025-oct.pdf",
 ];
 
-// 1. Define the Interface for Props
-interface MagazinePreviewProps {
-  pdfPath: string;
-}
-
-// 2. Apply the type to the component
-const MagazinePreview = ({ pdfPath }: MagazinePreviewProps) => {
-  return (
-    <div className="w-full h-full flex items-center justify-center bg-gray-50">
-      <Document 
-        file={pdfPath} 
-        loading={<div className="animate-pulse bg-gray-200 w-full h-full" />}
-      >
-        <Page 
-          pageNumber={1} 
-          width={180} 
-          renderTextLayer={false} 
-          renderAnnotationLayer={false} 
-        />
-      </Document>
-    </div>
-  );
-};
-
 const CollegeMagazine = () => {
   const [open, setOpen] = useState(false);
   const [currentPdf, setCurrentPdf] = useState("");
-
-  const magazineImages = {
-    hero: pageImages.adminSecretary,
-  };
 
   const openMagazine = (url: string) => {
     setCurrentPdf(url);
@@ -68,7 +39,6 @@ const CollegeMagazine = () => {
     const fileName = path.split('/').pop()?.replace('.pdf', '') || "";
     const [year, month] = fileName.split('-');
     
-    // Mapping for month slugs to full names
     const monthNames: Record<string, string> = { 
         aug: "August", sep: "September", oct: "October", nov: "November", 
         may: "May", june: "June", july: "July" 
@@ -86,7 +56,6 @@ const CollegeMagazine = () => {
           onContextMenu={(e) => e.preventDefault()} 
         >
           <div className="w-full max-w-3xl h-[90vh] bg-white rounded-2xl overflow-hidden relative shadow-2xl">
-            {/* Close Button */}
             <button
               onClick={() => setOpen(false)}
               className="absolute top-4 right-4 bg-red-600 hover:bg-red-700 text-white p-2 rounded-full z-50 transition-colors"
@@ -94,7 +63,6 @@ const CollegeMagazine = () => {
               <X size={24} />
             </button>
 
-            {/* Iframe with toolbar disabled */}
             <iframe
               src={`${currentPdf}#toolbar=0`}
               className="w-full h-full"
@@ -108,11 +76,10 @@ const CollegeMagazine = () => {
         title="JCS Magazine 2026"
         subtitle="Celebrating excellence, innovation, and a legacy of empowerment."
         breadcrumb="Home / Publication / Magazine"
-        image={magazineImages.hero}
+        image={pageImages.adminSecretary}
       />
 
       <div className="max-w-7xl mx-auto px-6 mt-16 space-y-24">
-        
         {/* Secretary Welcome */}
         <section className="bg-white p-10 rounded-3xl shadow-sm border border-gray-100 relative overflow-hidden">
           <div className="relative z-10 max-w-3xl">
@@ -145,12 +112,11 @@ const CollegeMagazine = () => {
               <div key={index} onClick={() => openMagazine(pdfPath)} className="group cursor-pointer">
                 <div className="aspect-[3/4] bg-white rounded-2xl overflow-hidden border border-gray-200 relative mb-3 group-hover:border-red-400 group-hover:shadow-lg transition-all">
                   
+                  {/* Loaded only on client */}
                   <MagazinePreview pdfPath={pdfPath} />
 
-                  {/* Spine Shadow for Depth */}
                   <div className="absolute inset-y-0 left-0 w-2 bg-gradient-to-r from-black/10 to-transparent pointer-events-none" />
 
-                  {/* Hover Overlay */}
                   <div className="absolute inset-0 bg-red-900/10 opacity-0 group-hover:opacity-100 transition-all flex items-center justify-center">
                     <span className="bg-white text-red-900 px-4 py-2 rounded-lg font-bold text-xs shadow-xl">Read PDF</span>
                   </div>
