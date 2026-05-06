@@ -24,9 +24,22 @@ const MagazinePreview = dynamic(() => import("../../components/MagazinePreview")
 });
 
 export const mag: string[] = [
-  "/pdf/2024-aug.pdf", "/pdf/2024-sep.pdf", "/pdf/2024-oct.pdf", "/pdf/2024-nov.pdf",
-  "/pdf/2025-may.pdf", "/pdf/2025-june.pdf", "/pdf/2025-july.pdf", "/pdf/2025-aug.pdf",
-  "/pdf/2025-sep.pdf", "/pdf/2025-oct.pdf",
+   "/pdf/2026-april.pdf",
+  "/pdf/2026-march.pdf",
+  "/pdf/2026-feb.pdf",
+  "/pdf/2026-jan.pdf",
+
+  "/pdf/2025-oct.pdf",
+  "/pdf/2025-sep.pdf",
+  "/pdf/2025-aug.pdf",
+  "/pdf/2025-july.pdf",
+  "/pdf/2025-june.pdf",
+  "/pdf/2025-may.pdf",
+
+  "/pdf/2024-nov.pdf",
+  "/pdf/2024-oct.pdf",
+  "/pdf/2024-sep.pdf",
+  "/pdf/2024-aug.pdf",
 ];
 
 const CollegeMagazine: React.FC = () => {
@@ -187,7 +200,7 @@ const CollegeMagazine: React.FC = () => {
             {mag.map((pdfPath, index) => (
            <div 
   key={index} 
-  onClick={() => {
+  onClick={() => { 
     setCurrentPdf(pdfPath);
     setOpen(true);
   }} 

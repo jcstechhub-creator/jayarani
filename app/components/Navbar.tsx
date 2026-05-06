@@ -254,9 +254,9 @@ export default function Navbar() {
       {!hideLayout &&
         <div className="sticky top-0 z-[100]">
 
-          <div className="bg-white border-b hidden md:block relative z-[150] overflow-visible">
+          <div className="bg-white border-b  relative z-[150] overflow-visible">
             <div className="max-w-[95%] mx-auto px-4 h-10 flex items-center justify-between text-[11px] font-bold tracking-tight overflow-visible">
-              <div className="flex items-center gap-6 text-gray-500">
+              <div className=" hidden md:flex  items-center gap-6 text-gray-500">
                 <Link href="/aishe" className="hover:text-[#2F4A8A] transition-colors">AISHE</Link>
                 <Link href="/nirf" className="hover:text-[#2F4A8A] transition-colors">NIRF</Link>
                 {/* <Link href="/ssr" className="hover:text-[#2F4A8A] transition-colors">SSR</Link> */}
@@ -304,7 +304,7 @@ export default function Navbar() {
                 {/* <Link href="/irins-jcs" className="hover:text-[#2F4A8A] transition-colors">IRINS-JCS</Link> */}
               </div>
 
-              <div className="flex items-center gap-4">
+              <div className="flex justify-end w-full md:w-auto items-center gap-4">
                 <Link
                   href="https://mail.google.com/a/jcs.edu.in"
                   target="_blank"
@@ -487,7 +487,7 @@ export default function Navbar() {
                 <h2 className="font-bold text-xl text-[#2F4A8A]">Main Menu</h2>
                 <span className="text-[10px] uppercase tracking-widest text-gray-400 font-medium">
                   Jayarani College
-                </span>
+                </span> 
               </div>
               <button
                 onClick={() => setSidebarOpen(false)}
