@@ -291,7 +291,7 @@ export const aishe = [
 export const pdfData = {
   "annual-report": "/pdf/annual-report.pdf",
   "anti-ragging": "/pdf/anti-ragging.pdf",
-  "letter": "/pdf/letter.pdf",
+  "letter": "/pdf/submission-letter.pdf",
 };
 
 export const mag = [
