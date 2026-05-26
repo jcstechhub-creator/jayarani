@@ -82,7 +82,7 @@ const navItems = [
     children: [
       {
         label: "Departments",
-        path: "/academics/departments",
+        // path: "/academics/departments",
         subChildren: [
           { label: "English", path: "/academics/departments/english" },
           { label: "Mathematics", path: "/academics/departments/maths" },
@@ -125,7 +125,7 @@ const navItems = [
       { label: "Life Skill Training", path: "/students/life-skills" },
       {
         label: "Co-Curricular Activities",
-        path: "/students/activities",
+        // path: "/students/activities",
         subChildren: [
           { label: "Fine Arts", path: "/students/activities/fine-arts" },
           { label: "Games & Sports", path: "/students/activities/games-sports" },
@@ -254,7 +254,7 @@ export default function Navbar() {
       {!hideLayout &&
         <div className="sticky top-0 z-[100]">
 
-          <div className="bg-white border-b  relative z-[150] overflow-visible">
+          <div className="bg-white border-b  relative z-[0] overflow-visible">
             <div className="max-w-[95%] mx-auto px-4 h-10 flex items-center justify-between text-[11px] font-bold tracking-tight overflow-visible">
               <div className=" hidden md:flex  items-center gap-6 text-gray-500">
                 <Link href="/aishe" className="hover:text-[#2F4A8A] transition-colors">AISHE</Link>
@@ -411,7 +411,7 @@ export default function Navbar() {
         {item.children && (
           <div className="absolute left-0 top-full w-64 pt-2 opacity-0 invisible group-hover/main:opacity-100 group-hover/main:visible transition-all duration-300 translate-y-2 group-hover/main:translate-y-0 z-50 pointer-events-none group-hover/main:pointer-events-auto">
             <div className="bg-white rounded-xl shadow-2xl border border-gray-100 py-2">
-              {item.children.map((child) => {
+              {item.children.map((child, indexf) => {
                 const isThisChildActive = pathname === child.path || child.subChildren?.some(sub => pathname === sub.path);
                 
                 return (
@@ -426,6 +426,25 @@ export default function Navbar() {
                       {child.subChildren && <ChevronRight size={14} />}
                     </Link>
                     {/* ... (Level 2 subChildren mapping remains the same) */}
+
+      {child.subChildren && (
+                                  <div
+                                    className={`absolute top-0 w-56 ${indexf > 5 ? "right-full mr-0" : "right-full ml-0"
+                                      } opacity-0 invisible group-hover/sub:opacity-100 group-hover/sub:visible transition-all duration-300 translate-x-2 group-hover/sub:translate-x-0 pointer-events-none group-hover/sub:pointer-events-auto`}
+                                  >  <div className="bg-white rounded-xl shadow-2xl border border-gray-100 py-2">
+                                      {child.subChildren.map((sub) => (
+                                        <Link
+                                          key={sub.path}
+                                          href={sub.path}
+                                          className="block px-5 py-2.5 text-xs font-semibold text-gray-600 hover:bg-gray-50 hover:text-[#2F4A8A] transition-colors"
+                                        >
+                                          {sub.label}
+                                        </Link>
+                                      ))}
+                                    </div>
+                                  </div>
+                                )}
+                    
                   </div>
                 );
               })}
@@ -465,12 +484,13 @@ export default function Navbar() {
           >
             {/* HEADER */}
             <div className="flex items-center justify-between p-5 border-b border-gray-50 bg-gray-50/50">
-              <div className="flex flex-col">
+            <Image className="h-10 w-10" src={jlogo} alt="" />
+        findthislo      {/* <div className="flex flex-col">
                 <h2 className="font-bold text-xl text-[#2F4A8A]">Main Menu</h2>
                 <span className="text-[10px] uppercase tracking-widest text-gray-400 font-medium">
                   Jayarani College
                 </span> 
-              </div>
+              </div> */}
               <button
                 onClick={() => setSidebarOpen(false)}
                 className="p-2 rounded-full hover:bg-red-50 hover:text-red-600 transition-colors"
@@ -503,7 +523,7 @@ export default function Navbar() {
                     </Link>
                   ) : (
                     <div className={`${item.label == "ODL Student Login"
-                      ? "hidden"
+                      ? "lg:hidden"
                       : ""
                       }`} >
                       {/* MAIN DROPDOWN */}
