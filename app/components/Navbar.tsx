@@ -137,7 +137,6 @@ const navItems = [
           { label: "Road Safety Club", path: "/students/activities/road-safety-club" },
           { label: "Literary Club", path: "/students/activities/literary" },
           { label: "Science Club", path: "/students/activities/science" },
-          { label: "Student Support Resources", path: "/students/activities/student-support-resources" },
         ],
       },
       { label: "Scholarships", path: "/students/scholarship" },
@@ -151,6 +150,8 @@ const navItems = [
       { label: "Women Empowerment Cell", path: "/students/women-empowerment" },
 
       { label: "Infant Jesus Power Cell", path: "/services/power-cell" },
+      
+          { label: "Student Support Resources", path: "/students/activities/student-support-resources" },
     ],
   },
   {
@@ -351,8 +352,8 @@ export default function Navbar() {
                 </Link>
 
                 {/* DESKTOP MENU */}
-                <div className="hidden xl:flex items-center gap-1">
- {navItems.slice(0, 7).map((item) => {
+ <div className="hidden xl:flex items-center gap-1">
+  {navItems.slice(0, 7).map((item, index) => { // Added index to track position
     // 1. Logic to check if this specific item or any of its children are active
     const isHomeActive = item.path === "/" && pathname === "/";
     const isChildActive = item.children?.some((child) => {
@@ -410,9 +411,19 @@ export default function Navbar() {
 
         {/* LEVEL 1 DROPDOWN */}
         {item.children && (
-          <div className="absolute left-0 top-full w-64 pt-2 opacity-0 invisible group-hover/main:opacity-100 group-hover/main:visible transition-all duration-300 translate-y-2 group-hover/main:translate-y-0 z-50 pointer-events-none group-hover/main:pointer-events-auto">
-            <div className="bg-white rounded-xl shadow-2xl border border-gray-100 py-2">
-              {item.children.map((child, indexf) => {
+          /* FIX: Changed `left-0` to a check. If it's the last couple of items (index >= 5), 
+            we use `right-0` so the dropdown grows backwards into the screen safely.
+          */
+          <div className={`absolute top-full pt-2 opacity-0 invisible group-hover/main:opacity-100 group-hover/main:visible transition-all duration-300 translate-y-2 group-hover/main:translate-y-0 z-50 pointer-events-none group-hover/main:pointer-events-auto ${
+            index >= 5 ? "right-0" : "left-0"
+          } ${
+            item.children.length > 10 ? "w-[512px]" : "w-64"
+          }`}>
+            {/* Grid layout for items over 6 options */}
+            <div className={`bg-white rounded-xl shadow-2xl border border-gray-100 py-2 ${
+              item.children.length > 10 ? "grid grid-cols-2 gap-x-1" : ""
+            }`}>
+              {item.children.map((child) => {
                 const isThisChildActive = pathname === child.path || child.subChildren?.some(sub => pathname === sub.path);
                 
                 return (
@@ -423,29 +434,32 @@ export default function Navbar() {
                         isThisChildActive ? "bg-blue-50 text-[#2F4A8A] font-bold" : "text-gray-700 hover:bg-blue-50 hover:text-[#2F4A8A]"
                       }`}
                     >
-                      {child.label}
-                      {child.subChildren && <ChevronRight size={14} />}
+                      <span className="truncate">{child.label}</span>
+                      {child.subChildren && <ChevronRight size={14} className="flex-shrink-0" />}
                     </Link>
-                    {/* ... (Level 2 subChildren mapping remains the same) */}
 
-      {child.subChildren && (
-                                  <div
-                                    className={`absolute top-0 w-56 ${indexf > 5 ? "right-full mr-0" : "right-full ml-0"
-                                      } opacity-0 invisible group-hover/sub:opacity-100 group-hover/sub:visible transition-all duration-300 translate-x-2 group-hover/sub:translate-x-0 pointer-events-none group-hover/sub:pointer-events-auto`}
-                                  >  <div className="bg-white rounded-xl shadow-2xl border border-gray-100 py-2">
-                                      {child.subChildren.map((sub) => (
-                                        <Link
-                                          key={sub.path}
-                                          href={sub.path}
-                                          className="block px-5 py-2.5 text-xs font-semibold text-gray-600 hover:bg-gray-50 hover:text-[#2F4A8A] transition-colors"
-                                        >
-                                          {sub.label}
-                                        </Link>
-                                      ))}
-                                    </div>
-                                  </div>
-                                )}
-                    
+                    {/* LEVEL 2 DROPDOWN (subChildren) */}
+                    {child.subChildren && (
+                      /* FIX: Since this dropdown is aligned to the right-0 of the screen, 
+                        the Level 2 flyouts must fly out to the LEFT side (`right-full`) 
+                        so they don't break the right edge either.
+                      */
+                      <div
+                        className="absolute top-0 w-56 right-full mr-0 opacity-0 invisible group-hover/sub:opacity-100 group-hover/sub:visible transition-all duration-300 translate-x-[-8px] group-hover/sub:translate-x-0 pointer-events-none group-hover/sub:pointer-events-auto z-[60]"
+                      >
+                        <div className="bg-white rounded-xl shadow-2xl border border-gray-100 py-2">
+                          {child.subChildren.map((sub) => (
+                            <Link
+                              key={sub.path}
+                              href={sub.path}
+                              className="block px-5 py-2.5 text-xs font-semibold text-gray-600 hover:bg-gray-50 hover:text-[#2F4A8A] transition-colors"
+                            >
+                              {sub.label}
+                            </Link>
+                          ))}
+                        </div>
+                      </div>
+                    )}
                   </div>
                 );
               })}
@@ -456,15 +470,15 @@ export default function Navbar() {
     );
   })}
 
-                  {/* EXPLORE BUTTON */}
-                  <button
-                    onClick={() => setSidebarOpen(true)}
-                    className="ml-4 p-2.5 bg-[#2F4A8A] text-white rounded-lg hover:bg-[#1f3a73] transition-all shadow-md active:scale-95 flex items-center gap-2 px-4"
-                  >
-                    <Menu size={18} />
-                    <span className="text-sm font-semibold">Explore</span>
-                  </button>
-                </div>
+  {/* EXPLORE BUTTON */}
+  <button
+    onClick={() => setSidebarOpen(true)}
+    className="ml-4 p-2.5 bg-[#2F4A8A] text-white rounded-lg hover:bg-[#1f3a73] transition-all shadow-md active:scale-95 flex items-center gap-2 px-4"
+  >
+    <Menu size={18} />
+    <span className="text-sm font-semibold">Explore</span>
+  </button>
+</div>
 
                 {/* MOBILE HAMBURGER */}
                 <button
@@ -486,7 +500,7 @@ export default function Navbar() {
             {/* HEADER */}
             <div className="flex items-center justify-between p-5 border-b border-gray-50 bg-gray-50/50">
             <Image className="h-10 w-10" src={jlogo} alt="" />
-        findthislo      {/* <div className="flex flex-col">
+         {/* <div className="flex flex-col">
                 <h2 className="font-bold text-xl text-[#2F4A8A]">Main Menu</h2>
                 <span className="text-[10px] uppercase tracking-widest text-gray-400 font-medium">
                   Jayarani College

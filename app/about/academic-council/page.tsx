@@ -85,7 +85,7 @@ export default function AcademicsPage() {
                   <div className="w-10 h-10 rounded-full bg-yellow-100 flex items-center justify-center">
                     <Award className="text-yellow-600 w-5 h-5" />
                   </div>
-                  <span className="font-semibold text-gray-700">NAAC Accredited</span>
+                  <span className="font-semibold text-gray-700"> Periyar University Affiliated</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <div className="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center">
