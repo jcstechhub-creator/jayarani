@@ -46,6 +46,10 @@ const resources = [
     link: "https://voters.eci.gov.in/",
   },
   {
+    label: "National Task Force",
+    link: "https://ntf.education.gov.in/",
+  },
+  {
     label: "VISHAKA GUIDELINES",
     link: "https://drive.google.com/file/d/1haPKcbRz1Hw3Sqdgx1fEliWyghGFGmt8/view?usp=drive_link",
   },

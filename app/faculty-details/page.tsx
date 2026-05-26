@@ -11,7 +11,7 @@ const FacultyDetailsPremium = () => {
   const [activeFilter, setActiveFilter] = useState("All");
   const facultyData = [
     { id: 1, name: "Dr. Sr. A. Jothi Mary", qual: "M.Com., M.Ed., M.Phil., Ph.D.", desig: "Secretary", dept: "Administration", honors: "FIHM Management" },
-    { id: 2, name: "Dr. Sr. A. Jenitta", qual: "M.E., Ph.D.", desig: "Principal", dept: "Administration", honors: "Principal I/C" },
+    { id: 2, name: "Rev. Sr. Dr. Jenitta Arockiasamy, FIHM", qual: "M.E., Ph.D.", desig: "Principal", dept: "Administration", honors: "Principal I/C" },
     { id: 3, name: "Dr. D. Arul Pon Daniel", qual: "MCA, MBA, Ph.D., BCS", desig: "Asst. Professor & Vice Principal", dept: "Computer Science", honors: "IQAC Coordinator" },
     { id: 4, name: "Ms. M. Syedalifathima", qual: "M.Sc., M.Phil.", desig: "Asst. Professor & Head", dept: "Computer Science", honors: "eGovernance, Anti Sexual Harassment Cell Coordinator" },
     { id: 5, name: "Ms. C. Sariga", qual: "MCA., M.Phil.", desig: "Asst. Professor", dept: "Computer Science", honors: "JCS Tech Hub, UMIS Correspondence, Examination Cell, Anti Drug, Grievance Redressal" },

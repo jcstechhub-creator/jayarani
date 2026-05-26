@@ -137,6 +137,7 @@ const navItems = [
           { label: "Road Safety Club", path: "/students/activities/road-safety-club" },
           { label: "Literary Club", path: "/students/activities/literary" },
           { label: "Science Club", path: "/students/activities/science" },
+          { label: "Student Support Resources", path: "/students/activities/student-support-resources" },
         ],
       },
       { label: "Scholarships", path: "/students/scholarship" },
@@ -254,7 +255,7 @@ export default function Navbar() {
       {!hideLayout &&
         <div className="sticky top-0 z-[100]">
 
-          <div className="bg-white border-b  relative z-[0] overflow-visible">
+          <div className="bg-white border-b  relative z-[100] overflow-visible">
             <div className="max-w-[95%] mx-auto px-4 h-10 flex items-center justify-between text-[11px] font-bold tracking-tight overflow-visible">
               <div className=" hidden md:flex  items-center gap-6 text-gray-500">
                 <Link href="/aishe" className="hover:text-[#2F4A8A] transition-colors">AISHE</Link>
