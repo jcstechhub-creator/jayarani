@@ -52,7 +52,7 @@ export default function PrincipalPage() {
             <div className="absolute top-0 right-0 w-full h-full bg-slate-50 -z-10 translate-x-6 translate-y-6 rounded-[2rem]" />
             <div className="overflow-hidden rounded-[2rem] shadow-2xl border-b-8 border-[#2F4A8A]">
               <img 
-               src={highprofession?.Principal}
+              //  src={highprofession?.Principal}
                 // src="/newgirlimages/image-37.jpeg" // Replace with actual photo
                 alt="College Principal"
                 className="w-full h-[550px] object-cover hover:scale-105 transition-transform duration-700"
@@ -96,7 +96,7 @@ export default function PrincipalPage() {
               </div>
               <div>
                 <h4 className="font-bold text-[#1A2E5A]">Rev. Sr. Dr. Jenitta Arockiasamy, FIHM</h4>
-                <p className="text-sm text-slate-400 font-medium">Ph.D. in Education, M.A., M.Ed.</p>
+                <p className="text-sm text-slate-400 font-medium">Ph.D.</p>
               </div>
             </div>
           </div>
